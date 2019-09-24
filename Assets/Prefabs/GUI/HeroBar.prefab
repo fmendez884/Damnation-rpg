@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5309859493492145522}
   m_Layer: 5
-  m_Name: HeroStats
+  m_Name: NameContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,10 +223,10 @@ RectTransform:
   m_Father: {fileID: 4544946643833717804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.025169134, y: 0}
-  m_AnchorMax: {x: 0.35347182, y: 0.8333334}
-  m_AnchoredPosition: {x: -0.24749756, y: -22.815002}
-  m_SizeDelta: {x: 0.495, y: 46.43}
+  m_AnchorMin: {x: 0.0074718115, y: 0}
+  m_AnchorMax: {x: 0.35347182, y: 0.86666673}
+  m_AnchoredPosition: {x: -0.039993286, y: -22.71}
+  m_SizeDelta: {x: 0.08000004, y: 46.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3425737166218685599
 GameObject:
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 8689591953329688526}
   - component: {fileID: 4958518796862284611}
   m_Layer: 5
-  m_Name: ProgressBarBorder (1)
+  m_Name: ProgressBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,12 +370,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 5180120352850692069}
   - component: {fileID: 1007271036686374962}
   m_Layer: 5
-  m_Name: ProgressBarBorder (2)
+  m_Name: ProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,11 +493,11 @@ RectTransform:
   m_Father: {fileID: 2059332448499664393}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.03937008}
-  m_AnchorMax: {x: 0.99500006, y: 0.96062994}
-  m_AnchoredPosition: {x: 0.11000061, y: 0.15999985}
-  m_SizeDelta: {x: -4.7, y: -5.63}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 2.4600067, y: 0.16000366}
+  m_SizeDelta: {x: 198.3, y: 18.369999}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5180120352850692069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7424744071388775658}
   m_Layer: 5
-  m_Name: HeroStatsHPMP
+  m_Name: HPMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18911871, y: 0.06666667}
   m_AnchorMax: {x: 0.47724628, y: 0.9333334}
-  m_AnchoredPosition: {x: 0.00048828125, y: -22.233002}
+  m_AnchoredPosition: {x: -0.00048828125, y: -20.900002}
   m_SizeDelta: {x: -0.00097656, y: 48.465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7132441462349701447
@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 5348193105773599826}
   - component: {fileID: 2002389932958317881}
   - component: {fileID: 7039217798934291874}
+  - component: {fileID: 5625102290770666395}
   m_Layer: 5
   m_Name: HeroBar
   m_TagString: Untagged
@@ -672,3 +673,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &5625102290770666395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132441462349701447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e8eb6590337403ab01dc4060162d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeroName: {fileID: 3809296741936062590}
+  HeroHP: {fileID: 7218252684727275590}
+  HeroMP: {fileID: 367987921814997883}
+  ProgressBar: {fileID: 1007271036686374962}

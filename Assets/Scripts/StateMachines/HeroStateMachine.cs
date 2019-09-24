@@ -22,7 +22,7 @@ public class HeroStateMachine : MonoBehaviour
     //for the ProgressBar
     private float cur_cooldown = 0f;
     private float max_cooldown = 5f;
-    public Image ProgressBar;
+    private Image ProgressBar;
     public GameObject Selector;
     //Ienumerator
     public GameObject EnemyToAttack;
@@ -40,10 +40,10 @@ public class HeroStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //create panel, fill in info of corresponding hero
-
         //find spacer object in gamescene, make connection
-
+        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.FindChild("HeroPanel").transform.FindChild("HeroPanelSpacer");
+        //create panel, fill in info of corresponding hero
+        CreateHeroPanel();
 
         startposition = transform.position;
         cur_cooldown = Random.Range(0, 2.5f);
@@ -174,13 +174,26 @@ public class HeroStateMachine : MonoBehaviour
             hero.curHP = 0;
             currentState = TurnState.DEAD;
         }
+        UpdateHeroPanel();
     }
-
+    
+    //create hero panel
     void CreateHeroPanel()
     {
         HeroPanel = Instantiate(HeroPanel) as GameObject;
         stats = HeroPanel.GetComponent<HeroPanelStats>();
-        
+        stats.HeroName.text = hero.className;
+        stats.HeroHP.text = "HP: " + hero.curHP + "/" + hero.baseHP;
+        stats.HeroMP.text = "MP: " + hero.curMP + "/" + hero.baseMP;
+        ProgressBar = stats.ProgressBar;
+        HeroPanel.transform.SetParent(HeroPanelSpacer, false);
+    }
+
+    //update stats on damage / heal
+    void UpdateHeroPanel()
+    {
+        stats.HeroHP.text = "HP: " + hero.curHP + "/" + hero.baseHP;
+        stats.HeroMP.text = "MP: " + hero.curMP + "/" + hero.baseMP;
     }
 }
 

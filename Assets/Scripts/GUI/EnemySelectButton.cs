@@ -17,7 +17,7 @@ public class EnemySelectButton : MonoBehaviour
         // if (showSelector) 
         {
             showSelector =!showSelector;
-            EnemyPrefab.transform.FindChild("Selector").gameObject.SetActive(showSelector);
+            EnemyPrefab.transform.Find("Selector").gameObject.SetActive(showSelector);
             // showSelector = !showSelector;
         }
     }
@@ -36,7 +36,7 @@ public class EnemySelectButton : MonoBehaviour
         // if (showSelector) 
         {
             showSelector =!showSelector;
-            EnemyPrefab.transform.FindChild("Selector").gameObject.SetActive(showSelector);
+            EnemyPrefab.transform.Find("Selector").gameObject.SetActive(showSelector);
             // showSelector = !showSelector;
         }
     }

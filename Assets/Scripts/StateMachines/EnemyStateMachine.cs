@@ -28,6 +28,8 @@ public class EnemyStateMachine : MonoBehaviour
     public GameObject HeroToAttack ;
     private float animSpeed = 10f;
     public GameObject Selector;
+    //alive 
+    private bool alive = true;
 
 
     // Start is called before the first frame update
@@ -60,7 +62,41 @@ public class EnemyStateMachine : MonoBehaviour
                 StartCoroutine (TimeForAction ());
             break;
             case (TurnState.DEAD):
-            
+                if (!alive)
+                {
+                    return;
+                }
+                else 
+                {
+                    //change tag of enemy
+                    this.gameObject.tag = "DeadEnemy";
+                    //not attackable by heros; remove from battle state machine
+                    BSM.EnemysInBattle.Remove(this.gameObject);
+                    //disable the selector
+                    // Selector.SetActive = false;
+                    //remove all inputs for enemy attacks 
+                    if (BSM.EnemysInBattle.Count > 0)
+                    {
+                        for (int i = 0; i < BSM.PerformList.Count; i++)
+                        {
+                            if(BSM.PerformList[i].AttackersGameObject == this.gameObject)
+                            {
+                                BSM.PerformList.Remove(BSM.PerformList[i]);
+                            }
+                            if(BSM.PerformList[i].AttackersTarget == this.gameObject)
+                            {
+                                BSM.PerformList[i].AttackersTarget = BSM.EnemysInBattle[Random.Range(0, BSM.EnemysInBattle.Count)];
+                            }
+                        }
+                    }
+                    //change color to gray / play dead animation
+                    this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105,105,105,250);
+                    alive = false;
+                    //reset enemy buttons
+                    BSM.EnemyButtons();
+                    //check alive
+                    BSM.battleStates = BattleStateMachine.PerformAction.CHECKALIVE;
+                }
             break;
         }
     }
@@ -132,6 +168,17 @@ public class EnemyStateMachine : MonoBehaviour
     private bool MoveTowardsStart(Vector3 target)
     {
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
+    }
+
+    public void TakeDamage(float GetDamageAmount)
+    {
+        enemy.curHP -= GetDamageAmount;
+        if(enemy.curHP <= 0)
+        {
+            enemy.curHP = 0;
+            currentState = TurnState.DEAD;
+        }
+
     }
 
     void DoDamage()

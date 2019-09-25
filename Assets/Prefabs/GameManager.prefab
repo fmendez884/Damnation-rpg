@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4869517536069365118
+--- !u!1 &1890807787876896126
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8881650221893024812}
-  - component: {fileID: -6189595577910695419}
+  - component: {fileID: 1890807787876896127}
+  - component: {fileID: 5983833025970528714}
   m_Layer: 0
-  m_Name: Poison1
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8881650221893024812
+--- !u!4 &1890807787876896127
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4869517536069365118}
+  m_GameObject: {fileID: 1890807787876896126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.13499999, y: 1.1100001, z: 0.3800006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6189595577910695419
+--- !u!114 &5983833025970528714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4869517536069365118}
+  m_GameObject: {fileID: 1890807787876896126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90706524864e42d0bf25a8de788e31d, type: 3}
+  m_Script: {fileID: 11500000, guid: c056ac6647efc4d9cbe006393da24f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackName: Poison 1
-  attackDescription: Basic Poison Spell which attacks slowly over time.
-  attackDamage: 5
-  attackCost: 5
+  HeroCharacter: {fileID: 653279308919801944, guid: 215c3f13ba31f41d8b457a0a157f4a46,
+    type: 3}

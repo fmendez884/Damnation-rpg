@@ -10,6 +10,9 @@ public class BattleStateMachine : MonoBehaviour
         WAIT,
         TAKEACTION,
         PERFORMACTION,
+        CHECKALIVE,
+        WIN,
+        LOSE
     }
 
     public PerformAction battleStates;
@@ -40,12 +43,15 @@ public class BattleStateMachine : MonoBehaviour
     public GameObject EnemySelectPanel;
     public GameObject MagicPanel;
 
-    //magic attack
+    //attacks of heros
     public Transform actionSpacer;
     public Transform magicSpacer;
     public GameObject actionButton;
     public GameObject magicButton;
     private List<GameObject> atkBtns = new List<GameObject>();
+
+    //enemy buttons
+    private List<GameObject> enemyBtns = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -109,8 +115,39 @@ public class BattleStateMachine : MonoBehaviour
 
             break;
             case (PerformAction.PERFORMACTION):
-            
-            break;  
+                //idle
+            break;
+            case (PerformAction.CHECKALIVE):
+            if (HerosInBattle.Count < 1)
+            {
+                battleStates = PerformAction.LOSE;
+                //lost game
+            }
+            else if (EnemysInBattle.Count < 1)
+            {
+                battleStates = PerformAction.WIN;
+                //win the battle
+            }
+            else
+            {
+                ClearAttackPanel();
+                HeroInput = HeroGUI.ACTIVATE;
+            }
+            break;
+            case (PerformAction.LOSE):
+            {
+                Debug.Log("YOU LOST");
+            }
+            break;
+            case (PerformAction.WIN):
+            {
+                Debug.Log("YOU WIN");
+                for (int i = 0; i < HerosInBattle.Count; i++)
+                {
+                    HerosInBattle[i].GetComponent<HeroStateMachine>().currentState = HeroStateMachine.TurnState.WAITING;
+                }
+            }
+            break;
         }
 
         switch (HeroInput)
@@ -118,7 +155,7 @@ public class BattleStateMachine : MonoBehaviour
             case (HeroGUI.ACTIVATE):
                 if (HerosToManage.Count > 0)
                 {
-                    HerosToManage[0].transform.Find("Selector").gameObject.SetActive(true);
+                    HerosToManage[0].transform.FindChild("Selector").gameObject.SetActive(true);
                     HeroChoice = new HandleTurn ();
                     
                     ActionPanel.SetActive(true);
@@ -142,8 +179,15 @@ public class BattleStateMachine : MonoBehaviour
         PerformList.Add(input);
     }
 
-    void EnemyButtons()  //populate enemy select panel
+    public void EnemyButtons()  //populate enemy select panel
     {
+        //clean up
+        foreach(GameObject enemyBtn in enemyBtns)
+        {
+            Destroy(enemyBtn);
+        }
+        enemyBtns.Clear();
+        //create buttons
         foreach (GameObject enemy in EnemysInBattle)
         {
             GameObject newButton = Instantiate (enemyButton) as GameObject;
@@ -151,13 +195,15 @@ public class BattleStateMachine : MonoBehaviour
 
             EnemyStateMachine cur_enemy = enemy.GetComponent<EnemyStateMachine> ();
 
-            Text buttonText = newButton.transform.Find("Text").gameObject.GetComponent<Text> ();
+            Text buttonText = newButton.transform.FindChild("Text").gameObject.GetComponent<Text> ();
             // Debug.Log("cur_enemy-", cur_enemy);
             // Debug.Log("cur_enemy.enemy-", cur_enemy.enemy);
             buttonText.text = cur_enemy.enemy.className;
 
             button.EnemyPrefab = enemy;
+
             newButton.transform.SetParent(Spacer, false);
+            enemyBtns.Add(newButton);
         }
     }
 
@@ -167,7 +213,7 @@ public class BattleStateMachine : MonoBehaviour
         HeroChoice.Attacker = HerosToManage[0].name;
         HeroChoice.AttackersGameObject = HerosToManage[0];
         HeroChoice.Type = "Hero";
-        //once clicked, attack button, we will choose corresponding attack
+        //once clicked, attack button, choose corresponding attack
             //if goingto add more attack to attack, you con choose a random one
                 //or createpublic variable and put one specified attac into that spot
         HeroChoice.ChosenAttack = HerosToManage[0].GetComponent<HeroStateMachine>().hero.Attacks[0]; // or loop through the possible attacks ; grab one at random
@@ -185,32 +231,39 @@ public class BattleStateMachine : MonoBehaviour
     void HeroInputDone()
     {
         PerformList.Add(HeroChoice);
-        EnemySelectPanel.SetActive(false);
-
         //clean the AttackPanel
+        ClearAttackPanel();
+
+        HerosToManage[0].transform.FindChild("Selector").gameObject.SetActive(false);
+        HerosToManage.RemoveAt(0);
+        HeroInput = HeroGUI.ACTIVATE;
+    }
+
+    void ClearAttackPanel()
+    {
+        EnemySelectPanel.SetActive(false);
+        ActionPanel.SetActive(false);
+        MagicPanel.SetActive(false);
+
         foreach(GameObject atkBtn in atkBtns)
         {
             Destroy(atkBtn);
         }
         atkBtns.Clear();
-
-        HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
-        HerosToManage.RemoveAt(0);
-        HeroInput = HeroGUI.ACTIVATE;
     }
 
     //create actionButtons
     void CreateAttackButtons()
     {
         GameObject AttackButton = Instantiate(actionButton) as GameObject;
-        Text AttackButtonText = AttackButton.transform.Find("Text").gameObject.GetComponent<Text>();
+        Text AttackButtonText = AttackButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
         AttackButtonText.text = "Attack";
         AttackButton.GetComponent<Button>().onClick.AddListener(() => Input1());
         AttackButton.transform.SetParent(actionSpacer, false);
         atkBtns.Add(AttackButton);
 
         GameObject MagicButton = Instantiate(actionButton) as GameObject;
-        Text MagicButtonText = MagicButton.transform.Find("Text").gameObject.GetComponent<Text>();
+        Text MagicButtonText = MagicButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
         MagicButtonText.text = "Magic";
         MagicButton.GetComponent<Button>().onClick.AddListener(() => Input3());
         MagicButton.transform.SetParent(actionSpacer, false);
@@ -222,7 +275,7 @@ public class BattleStateMachine : MonoBehaviour
             {
                 Debug.Log(magicAtk);
                 GameObject SpellButton =  Instantiate(magicButton) as GameObject;
-                Text SpellButtonText = SpellButton.transform.Find("Text").gameObject.GetComponent<Text>();
+                Text SpellButtonText = SpellButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
                 SpellButtonText.text = magicAtk.attackName;
 
                 AttackButton ATB = SpellButton.GetComponent<AttackButton>();

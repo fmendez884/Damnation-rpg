@@ -41,7 +41,7 @@ public class HeroStateMachine : MonoBehaviour
     void Start()
     {
         //find spacer object in gamescene, make connection
-        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.Find("HeroPanel").transform.Find("HeroPanelSpacer");
+        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.FindChild("HeroPanel").transform.FindChild("HeroPanelSpacer");
         //create panel, fill in info of corresponding hero
         CreateHeroPanel();
 
@@ -94,18 +94,27 @@ public class HeroStateMachine : MonoBehaviour
                     BSM.ActionPanel.SetActive(false);
                     BSM.EnemySelectPanel.SetActive(false);
                     //remove item from performList 
-                    for(int i = 0; i < BSM.PerformList.Count; i++)
+                    if (BSM.HerosInBattle.Count > 0);
                     {
-                        if (BSM.PerformList[i].AttackersGameObject == this.gameObject)
+                        for(int i = 0; i < BSM.PerformList.Count; i++)
                         {
-                            BSM.PerformList.Remove(BSM.PerformList[i]);
+                            if (BSM.PerformList[i].AttackersGameObject == this.gameObject)
+                            {
+                                BSM.PerformList.Remove(BSM.PerformList[i]);
+                            }
+                            
+                            if (BSM.PerformList[i].AttackersTarget == this.gameObject)
+                            {
+                                BSM.PerformList[i].AttackersTarget = BSM.HerosInBattle[Random.Range(0, BSM.HerosInBattle.Count)];
+                            }
+
                         }
+                        //change color / dead animation
+                        this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105,105,105,105);
+                        //reset heroInput  //// BSM.HeroInput = BattleStateMachine.HeroGUI.ACTIVATE;
+                        BSM.battleStates = BattleStateMachine.PerformAction.CHECKALIVE;
+                        alive = false;
                     }
-                    //change color / dead animation
-                    this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105,105,105,105);
-                    //reset heroInput
-                    BSM.HeroInput = BattleStateMachine.HeroGUI.ACTIVATE;
-                    alive = false;
                 }
             break;
         }
@@ -141,20 +150,27 @@ public class HeroStateMachine : MonoBehaviour
         //wait a bit 
         yield return new WaitForSeconds(0.5f);
         //do damage 
-
+        DealDamage();
         //animate back to startposition 
         Vector3 firstPosition = startposition;
         while (MoveTowardsStart(firstPosition)) { yield return null; }
 
         //remove this performer from the list in BSM
         BSM.PerformList.RemoveAt(0); // the item at the 0 position will be removed
-        //reset BSM -> wait 
-        BSM.battleStates = BattleStateMachine.PerformAction.WAIT;
-        //end coroutine
-        actionStarted = false;
-        // reset this enemy state 
-        cur_cooldown = 0f;
-        currentState = TurnState.PROCESSING;
+            //reset BSM -> wait 
+        if(BSM.battleStates != BattleStateMachine.PerformAction.WIN && BSM.battleStates != BattleStateMachine.PerformAction.LOSE)
+        {
+            BSM.battleStates = BattleStateMachine.PerformAction.WAIT;
+            //end coroutine
+            // reset this enemy state 
+            cur_cooldown = 0f;
+            currentState = TurnState.PROCESSING;
+        }
+        else 
+        {
+            currentState = TurnState.WAITING;
+        }
+            actionStarted = false;
     }
 
     private bool MoveTowardsEnemy(Vector3 target)
@@ -177,6 +193,14 @@ public class HeroStateMachine : MonoBehaviour
         }
         UpdateHeroPanel();
     }
+
+    //deal damage 
+    void DealDamage()
+    {
+        float calc_damage = hero.curATK + BSM.PerformList[0].ChosenAttack.attackDamage;
+        EnemyToAttack.GetComponent<EnemyStateMachine>().TakeDamage(calc_damage);
+        Debug.Log(this.gameObject.name + " has chosen " + BSM.PerformList[0].ChosenAttack.attackName + " and does " + calc_damage + " damage!");
+    }
     
     //create hero panel
     void CreateHeroPanel()
@@ -197,5 +221,3 @@ public class HeroStateMachine : MonoBehaviour
         stats.HeroMP.text = "MP: " + hero.curMP + "/" + hero.baseMP;
     }
 }
-
-

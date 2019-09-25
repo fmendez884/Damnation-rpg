@@ -10,4 +10,5 @@ public class BaseHero : BaseClass
     public int dextrity;
     public int agility;
     
+    public List<BaseAttack> MagicAttacks = new List<BaseAttack>();
 }

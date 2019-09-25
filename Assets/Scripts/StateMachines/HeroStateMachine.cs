@@ -91,7 +91,7 @@ public class HeroStateMachine : MonoBehaviour
                     // deactivate selector
                     Selector.SetActive(false);
                     //reset gui
-                    BSM.AttackPanel.SetActive(false);
+                    BSM.ActionPanel.SetActive(false);
                     BSM.EnemySelectPanel.SetActive(false);
                     //remove item from performList 
                     for(int i = 0; i < BSM.PerformList.Count; i++)
@@ -113,12 +113,13 @@ public class HeroStateMachine : MonoBehaviour
 
     void UpgradeProgressBar()
     {
+        ProgressBar.GetComponent<Image>().color = new Color32(80,80,150,150);
         cur_cooldown = cur_cooldown + Time.deltaTime;
         float calc_cooldown = cur_cooldown / max_cooldown;
         ProgressBar.transform.localScale = new Vector3(Mathf.Clamp(calc_cooldown, 0, 1), ProgressBar.transform.localScale.y, ProgressBar.transform.localScale.z);
         if (cur_cooldown >= max_cooldown) 
         {
-            ProgressBar.GetComponent<Image>().color = new Color32(250,255,190,240);  //before: 250,255,131,240)
+            ProgressBar.GetComponent<Image>().color = new Color32(250,255,180,240);  //before: 250,255,131,240)
             currentState = TurnState.ADDTOLIST;
             // Debug.Log(currentState);
         }

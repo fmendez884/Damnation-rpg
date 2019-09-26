@@ -7,19 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    //CLASS RANDOM MONSTER
-    [System.Serializable]
-    public class RegionData 
-    {
-        public string regionName;
-        public int maxAmountEnemys = 4;
-        public string BattleScene;
-        public List<GameObject> possibleEnemys = new List<GameObject>();
-    }
-
-    public int curRegion;
-
-    public List<RegionData> Regions = new List<RegionData>();
+    public RegionData curRegion;
 
     // SpawnPoints
     public string nextSpawnPoint;
@@ -131,11 +119,11 @@ public class GameManager : MonoBehaviour
     void StartBattle()
     {
         // AMOUNT OF ENEMYS
-        enemyAmount = Random.Range(1, Regions[curRegion].maxAmountEnemys+1);
+        enemyAmount = Random.Range(1, curRegion.maxAmountEnemys+1);
         // WHICH ENEMYS 
         for (int i = 0; i < enemyAmount; i++)
         {
-            enemysToBattle.Add(Regions[curRegion].possibleEnemys[Random.Range(0, Regions[curRegion].possibleEnemys.Count)]);
+            enemysToBattle.Add(curRegion.possibleEnemys[Random.Range(0, curRegion.possibleEnemys.Count)]);
         }
         //HERO
         lastHeroPosition = GameObject.Find("HeroCharacter").gameObject.transform.position;
@@ -146,7 +134,7 @@ public class GameManager : MonoBehaviour
         gotAttacked = false;
         canGetEncounter = false;
         //LOAD LEVEL
-        SceneManager.LoadScene(Regions[curRegion].BattleScene);
+        SceneManager.LoadScene(curRegion.BattleScene);
     }
 
     // Update is called once per frame

@@ -11,8 +11,9 @@ TagManager:
   - EnterTown
   - LeaveTown
   - region1
-  - region2
   - teleporter
+  - cameraField
+  - EncounterZone
   layers:
   - Default
   - TransparentFX

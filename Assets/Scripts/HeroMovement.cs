@@ -69,37 +69,6 @@ public class HeroMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // if(other.tag == "teleporter")
-        // {
-        //     CollisionHandler col =  other.gameObject.GetComponent<CollisionHandler>();
-        //     GameManager.instance.nextSpawnPoint = col.spawnPointName;
-        //     GameManager.instance.sceneToLoad = col.sceneToLoad;
-        //     GameManager.instance.LoadNextScene();
-        // }
-        // // if(other.tag == "EnterTown")
-        // // {
-        // //     CollisionHandler col =  other.gameObject.GetComponent<CollisionHandler>();
-        // //     // GameManager.instance.nextHeroPosition = col.spawnPoint.transform.position;
-        // //     GameManager.instance.sceneToLoad = col.sceneToLoad;
-        // //     GameManager.instance.LoadNextScene();
-        // // }
-        // // if(other.tag == "LeaveTown")
-        // // {
-        // //     CollisionHandler col =  other.gameObject.GetComponent<CollisionHandler>();
-        // //     // GameManager.instance.nextHeroPosition = col.spawnPoint.transform.position;
-        // //     GameManager.instance.sceneToLoad = col.sceneToLoad;
-        // //     GameManager.instance.LoadNextScene();
-        // // }
-
-        // if (other.tag == "region1")
-        // {
-        //     GameManager.instance.curRegion = 0;
-        // }
-        // if (other.tag == "region2")
-        // {
-        //     GameManager.instance.curRegion = 1;
-        // }
-
         switch (other.tag)
         {
             case ("teleporter"):
@@ -110,37 +79,28 @@ public class HeroMovement : MonoBehaviour
                 GameManager.instance.LoadNextScene();
             }
             break;
-            case ("region1"):
-            {
-                GameManager.instance.curRegion = 0;
-            }
             break;
-            case ("region2"):
-            {
-                GameManager.instance.curRegion = 1;
-            }
-            break;
-            case ("cameraField"):
-                // Debug.Log("in camera field");
-                // cameraAreaCheck camera = new cameraAreaCheck();
-                // camera.switchState();
-                // camera.moveCamera();
+            case ("EncounterZone"):
+                RegionData region = other.gameObject.GetComponent<RegionData>();
+                GameManager.instance.curRegion = region;
             break;
         }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if(other.tag == "region1" || other.tag == "region2")
+        if(other.tag == "EncounterZone")
         {
+            // RegionData region = other.gameObject.GetComponent<RegionData>();
             GameManager.instance.canGetEncounter = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if(other.tag == "region1" || other.tag == "region2")
+        if(other.tag == "EncounterZone")
         {
+            // RegionData region = other.gameObject.GetComponent<RegionData>();
             GameManager.instance.canGetEncounter = false;
         }
     }

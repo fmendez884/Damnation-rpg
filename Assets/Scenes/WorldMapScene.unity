@@ -276,7 +276,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.38, z: -1.75, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 607432151}
   m_Layer: 0
   m_Name: EncounterRegion1
-  m_TagString: Untagged
+  m_TagString: region1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7adc7f7eaf9e405e97bb4e34e0c7213, type: 2}
+  - {fileID: 2100000, guid: 6507149613b36415cbf72f54210c6480, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -523,6 +523,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].possibleEnemys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[1].possibleEnemys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].regionName
+      value: region1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].maxAmountEnemys
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[1].regionName
+      value: region2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[1].maxAmountEnemys
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].BattleScene
+      value: BattleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[1].BattleScene
+      value: BattleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[1].possibleEnemys.Array.data[0]
+      value: 
+      objectReference: {fileID: 6522405782334075037, guid: 4691fcb05014d45f6a4fb561ba72f232,
+        type: 3}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].possibleEnemys.Array.data[0]
+      value: 
+      objectReference: {fileID: 978849163074011927, guid: 6ee9398ae0dd34c08a72ec6a8a77163e,
+        type: 3}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: Regions.Array.data[0].possibleEnemys.Array.data[1]
+      value: 
+      objectReference: {fileID: 6522405782334075037, guid: 4691fcb05014d45f6a4fb561ba72f232,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ca7d33216c14688850411672fd7374, type: 3}
 --- !u!1 &868261531
@@ -632,7 +695,7 @@ GameObject:
   - component: {fileID: 923398492}
   m_Layer: 0
   m_Name: EncounterRegion(1)
-  m_TagString: Untagged
+  m_TagString: region1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +744,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7adc7f7eaf9e405e97bb4e34e0c7213, type: 2}
+  - {fileID: 2100000, guid: 6507149613b36415cbf72f54210c6480, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -831,8 +894,8 @@ GameObject:
   - component: {fileID: 1948670818}
   - component: {fileID: 1948670817}
   m_Layer: 0
-  m_Name: EncounterRegion (1)
-  m_TagString: Untagged
+  m_Name: EncounterRegion 2
+  m_TagString: region2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,7 +930,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7adc7f7eaf9e405e97bb4e34e0c7213, type: 2}
+  - {fileID: 2100000, guid: 6507149613b36415cbf72f54210c6480, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

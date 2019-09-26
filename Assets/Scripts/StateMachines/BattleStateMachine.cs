@@ -54,10 +54,23 @@ public class BattleStateMachine : MonoBehaviour
     private List<GameObject> enemyBtns = new List<GameObject>();
 
     // Start is called before the first frame update
+
+    //list of spawn points 
+    public List<Transform> spawnPoints = new List<Transform>();
+    void Awake() 
+    {
+        for(int i = 0; i < GameManager.instance.enemyAmount; i++)
+        {
+            GameObject NewEnemy = Instantiate(GameManager.instance.enemysToBattle[i], spawnPoints[i].position, Quaternion.identity) as GameObject;
+            NewEnemy.name = NewEnemy.GetComponent<EnemyStateMachine>().enemy.className+"_"+ i + 1;
+            NewEnemy.GetComponent<EnemyStateMachine>().enemy.className = NewEnemy.name;
+            EnemysInBattle.Add(NewEnemy);
+        }
+    }
     void Start()
     {
         battleStates = PerformAction.WAIT;
-        EnemysInBattle.AddRange(GameObject.FindGameObjectsWithTag ("Enemy"));
+        // EnemysInBattle.AddRange(GameObject.FindGameObjectsWithTag ("Enemy"));
         HerosInBattle.AddRange(GameObject.FindGameObjectsWithTag ("Hero"));
         HeroInput = HeroGUI.ACTIVATE;
 
@@ -146,6 +159,10 @@ public class BattleStateMachine : MonoBehaviour
                 {
                     HerosInBattle[i].GetComponent<HeroStateMachine>().currentState = HeroStateMachine.TurnState.WAITING;
                 }
+
+                GameManager.instance.LoadSceneAfterBattle();
+                GameManager.instance.gameState = GameManager.GameStates.WORLD_STATE;
+                GameManager.instance.enemysToBattle.Clear();
             }
             break;
         }

@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 1751599623216050442, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1751599623216050442, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: WorldMapScene
       objectReference: {fileID: 0}
+    - target: {fileID: 3168533615948692269, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: spawnPointName
+      value: SP_Leave_Town1
+      objectReference: {fileID: 0}
     - target: {fileID: 1751599622630491105, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
       propertyPath: m_Enabled
@@ -216,6 +221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751599622658272224, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: m_TagString
+      value: teleporter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777c0a61d7f02425ca8811e91899c436, type: 3}
@@ -330,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 2269025555157857667, guid: dd7cef993672e48c0a580111cc4f0d76,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2269025555157857667, guid: dd7cef993672e48c0a580111cc4f0d76,
         type: 3}

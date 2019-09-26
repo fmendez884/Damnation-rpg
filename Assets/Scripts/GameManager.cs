@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public int curRegion;
 
     public List<RegionData> Regions = new List<RegionData>();
+
+    // SpawnPoints
+    public string nextSpawnPoint;
+    
     // Hero 
     public GameObject HeroCharacter;
 
@@ -56,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             // if not set the instance to this
+            Debug.Log("null reference????");
             instance = this;
         }
         // if it exists but is not this instance

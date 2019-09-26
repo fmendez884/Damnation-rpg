@@ -12,6 +12,7 @@ TagManager:
   - LeaveTown
   - region1
   - region2
+  - teleporter
   layers:
   - Default
   - TransparentFX

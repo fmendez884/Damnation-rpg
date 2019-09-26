@@ -276,7 +276,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.38, z: -1.75, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -788,7 +788,7 @@ PrefabInstance:
     - target: {fileID: 1751599623216050445, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
       propertyPath: m_TagString
-      value: EnterTown
+      value: teleporter
       objectReference: {fileID: 0}
     - target: {fileID: 1751599623216050442, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
@@ -845,6 +845,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3168533615948692269, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: spawnPointName
+      value: SP_EnterTown1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168533615948692269, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: TownScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777c0a61d7f02425ca8811e91899c436, type: 3}
 --- !u!1 &1364378377 stripped
@@ -866,8 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: TownScene
-  spawnPoint: {fileID: 2269025555157857692, guid: dd7cef993672e48c0a580111cc4f0d76,
-    type: 3}
+  spawnPointName: SP_EnterTown1
 --- !u!65 &1364378379
 BoxCollider:
   m_ObjectHideFlags: 0

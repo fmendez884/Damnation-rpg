@@ -98,16 +98,18 @@ public class HeroStateMachine : MonoBehaviour
                     {
                         for(int i = 0; i < BSM.PerformList.Count; i++)
                         {
-                            if (BSM.PerformList[i].AttackersGameObject == this.gameObject)
+                            if (i != 0)
                             {
-                                BSM.PerformList.Remove(BSM.PerformList[i]);
+                                if (BSM.PerformList[i].AttackersGameObject == this.gameObject)
+                                {
+                                    BSM.PerformList.Remove(BSM.PerformList[i]);
+                                }
+                                
+                                if (BSM.PerformList[i].AttackersTarget == this.gameObject)
+                                {
+                                    BSM.PerformList[i].AttackersTarget = BSM.HerosInBattle[Random.Range(0, BSM.HerosInBattle.Count)];
+                                }
                             }
-                            
-                            if (BSM.PerformList[i].AttackersTarget == this.gameObject)
-                            {
-                                BSM.PerformList[i].AttackersTarget = BSM.HerosInBattle[Random.Range(0, BSM.HerosInBattle.Count)];
-                            }
-
                         }
                         //change color / dead animation
                         this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105,105,105,105);

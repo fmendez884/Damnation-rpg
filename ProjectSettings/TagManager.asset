@@ -10,6 +10,10 @@ TagManager:
   - DeadEnemy
   - EnterTown
   - LeaveTown
+  - region1
+  - teleporter
+  - cameraField
+  - EncounterZone
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionHandler : MonoBehaviour
 {
     public string sceneToLoad; // Scene to Load when hitting collider
-    public GameObject spawnPoint;
+    public string spawnPointName;
+    // public GameObject spawnPoint;
     //GameState
 }

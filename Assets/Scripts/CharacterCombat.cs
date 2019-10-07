@@ -27,14 +27,14 @@ public class CharacterCombat : MonoBehaviour
         if (attackCooldown <= 0f)
         {
             StartCoroutine(DoDamage(targetStats, attackDelay));
-
+            
             if (onAttack != null)
-                OnAttack(); 
+                // OnAttack(); 
             attackCooldown = 1f / attackSpeed;
         }
     }
 
-    IEnumerator DoDamge(CharacterStats stats, float delay)
+    IEnumerator DoDamage(CharacterStats stats, float delay)
     {
         yield return new WaitForSeconds(delay);
 

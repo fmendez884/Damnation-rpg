@@ -1,0 +1,625 @@
+fileFormatVersion: 2
+guid: 9f82aa7445f950f46b8d0737f163b7df
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bones
+    100004: Chest
+    100006: Foot_L
+    100008: Foot_L.001
+    100010: Foot_L.001_end
+    100012: Foot_R
+    100014: Foot_R.001
+    100016: Foot_R.001_end
+    100018: Hand_L
+    100020: Hand_L.001Sheld
+    100022: Hand_L.001Sheld_end
+    100024: Hand_R
+    100026: Hand_R.001Nojik
+    100028: Hand_R.001Nojik_end
+    100030: Head
+    100032: Hips
+    100034: Hips_001
+    100036: IndexDistal_L
+    100038: IndexDistal_L_end
+    100040: IndexDistal_R
+    100042: IndexDistal_R_end
+    100044: IndexInter_L
+    100046: IndexInter_R
+    100048: IndexProximal_L
+    100050: IndexProximal_R
+    100052: Jaw
+    100054: Jaw_end
+    100056: Left_Eye
+    100058: Left_Eye_end
+    100060: LittleDistal_L
+    100062: LittleDistal_L_end
+    100064: LittleDistal_R
+    100066: LittleDistal_R_end
+    100068: LittleInter_L
+    100070: LittleInter_R
+    100072: LittleProximal_L
+    100074: LittleProximal_R
+    100076: LowerArm_L
+    100078: LowerArm_L.001
+    100080: LowerArm_L.001_end
+    100082: LowerArm_R
+    100084: LowerArm_R.001
+    100086: LowerArm_R.001_end
+    100088: LowerLeg_L
+    100090: LowerLeg_L.001
+    100092: LowerLeg_L.001_end
+    100094: LowerLeg_R
+    100096: LowerLeg_R.001
+    100098: LowerLeg_R.001_end
+    100100: MiddleDistal_L
+    100102: MiddleDistal_L_end
+    100104: MiddleDistal_R
+    100106: MiddleDistal_R_end
+    100108: MiddleInter_L
+    100110: MiddleInter_R
+    100112: MiddleProximal_L
+    100114: MiddleProximal_R
+    100116: Neck
+    100118: Right_Eye
+    100120: Right_Eye_end
+    100122: RingDistal_L
+    100124: RingDistal_L_end
+    100126: RingDistal_R
+    100128: RingDistal_R_end
+    100130: RingInter_L
+    100132: RingInter_R
+    100134: RingProximal_L
+    100136: RingProximal_R
+    100138: Sgoulder_L
+    100140: Sgoulder_R
+    100142: Sheld2
+    100144: Sheld2_end
+    100146: Spine
+    100148: ThumbDistal_L
+    100150: ThumbDistal_L_end
+    100152: ThumbDistal_R
+    100154: ThumbDistal_R_end
+    100156: ThumbInter_L
+    100158: ThumbInter_R
+    100160: ThumbProximal_L
+    100162: ThumbProximal_R
+    100164: Toes_L
+    100166: Toes_L_end
+    100168: Toes_R
+    100170: Toes_R_end
+    100172: UpperArm_L
+    100174: UpperArm_R
+    100176: UpperLeg_L
+    100178: UpperLeg_R
+    100180: ZolrikLeatherHelmet
+    100182: //RootNode
+    100184: ZolrikMercenary.001
+    100186: ZolrikScimitar
+    100188: ZolrikShield
+    400000: Armature
+    400002: Bones
+    400004: Chest
+    400006: Foot_L
+    400008: Foot_L.001
+    400010: Foot_L.001_end
+    400012: Foot_R
+    400014: Foot_R.001
+    400016: Foot_R.001_end
+    400018: Hand_L
+    400020: Hand_L.001Sheld
+    400022: Hand_L.001Sheld_end
+    400024: Hand_R
+    400026: Hand_R.001Nojik
+    400028: Hand_R.001Nojik_end
+    400030: Head
+    400032: Hips
+    400034: Hips_001
+    400036: IndexDistal_L
+    400038: IndexDistal_L_end
+    400040: IndexDistal_R
+    400042: IndexDistal_R_end
+    400044: IndexInter_L
+    400046: IndexInter_R
+    400048: IndexProximal_L
+    400050: IndexProximal_R
+    400052: Jaw
+    400054: Jaw_end
+    400056: Left_Eye
+    400058: Left_Eye_end
+    400060: LittleDistal_L
+    400062: LittleDistal_L_end
+    400064: LittleDistal_R
+    400066: LittleDistal_R_end
+    400068: LittleInter_L
+    400070: LittleInter_R
+    400072: LittleProximal_L
+    400074: LittleProximal_R
+    400076: LowerArm_L
+    400078: LowerArm_L.001
+    400080: LowerArm_L.001_end
+    400082: LowerArm_R
+    400084: LowerArm_R.001
+    400086: LowerArm_R.001_end
+    400088: LowerLeg_L
+    400090: LowerLeg_L.001
+    400092: LowerLeg_L.001_end
+    400094: LowerLeg_R
+    400096: LowerLeg_R.001
+    400098: LowerLeg_R.001_end
+    400100: MiddleDistal_L
+    400102: MiddleDistal_L_end
+    400104: MiddleDistal_R
+    400106: MiddleDistal_R_end
+    400108: MiddleInter_L
+    400110: MiddleInter_R
+    400112: MiddleProximal_L
+    400114: MiddleProximal_R
+    400116: Neck
+    400118: Right_Eye
+    400120: Right_Eye_end
+    400122: RingDistal_L
+    400124: RingDistal_L_end
+    400126: RingDistal_R
+    400128: RingDistal_R_end
+    400130: RingInter_L
+    400132: RingInter_R
+    400134: RingProximal_L
+    400136: RingProximal_R
+    400138: Sgoulder_L
+    400140: Sgoulder_R
+    400142: Sheld2
+    400144: Sheld2_end
+    400146: Spine
+    400148: ThumbDistal_L
+    400150: ThumbDistal_L_end
+    400152: ThumbDistal_R
+    400154: ThumbDistal_R_end
+    400156: ThumbInter_L
+    400158: ThumbInter_R
+    400160: ThumbProximal_L
+    400162: ThumbProximal_R
+    400164: Toes_L
+    400166: Toes_L_end
+    400168: Toes_R
+    400170: Toes_R_end
+    400172: UpperArm_L
+    400174: UpperArm_R
+    400176: UpperLeg_L
+    400178: UpperLeg_R
+    400180: ZolrikLeatherHelmet
+    400182: //RootNode
+    400184: ZolrikMercenary.001
+    400186: ZolrikScimitar
+    400188: ZolrikShield
+    2100000: ZolrikScimitarMaterial
+    2100002: ZolrikShieldMaterial
+    2100004: ZolrikLeatherHelmetMaterial
+    2100006: ZolrikMercenaryMaterial
+    4300000: ZolrikScimitar
+    4300002: ZolrikShield
+    4300004: ZolrikLeatherHelmet
+    4300006: ZolrikMercenary.001
+    7400000: Scene
+    7400002: Idle (1)
+    7400004: Idle (2)
+    7400006: Idle (3)
+    7400008: Idle (4)
+    7400010: Idle (5)
+    7400012: Walk (1)
+    7400014: Walk (2)
+    7400016: Run
+    7400018: Attack
+    7400020: Death
+    9500000: //RootNode
+    13700000: ZolrikLeatherHelmet
+    13700002: ZolrikMercenary.001
+    13700004: ZolrikScimitar
+    13700006: ZolrikShield
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZolrikLeatherHelmetMaterial
+    second: {fileID: 2100000, guid: 6a88749fcb42c494ca44c33289c5314b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZolrikMercenaryMaterial
+    second: {fileID: 2100000, guid: 8a5b769f41effb148bb382b793b6d7a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZolrikScimitarMaterial
+    second: {fileID: 2100000, guid: 86aba87af4f5afb45be224e71885a269, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZolrikShieldMaterial
+    second: {fileID: 2100000, guid: 412098a4de520e444b61a7bb8038eef8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Scene
+      takeName: Scene
+      firstFrame: 0
+      lastFrame: 670
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle (1)
+      takeName: Scene
+      firstFrame: 5
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle (2)
+      takeName: Scene
+      firstFrame: 55
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle (3)
+      takeName: Scene
+      firstFrame: 150
+      lastFrame: 305
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle (4)
+      takeName: Scene
+      firstFrame: 305
+      lastFrame: 445
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle (5)
+      takeName: Scene
+      firstFrame: 445
+      lastFrame: 510
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk (1)
+      takeName: Scene
+      firstFrame: 511
+      lastFrame: 541
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk (2)
+      takeName: Scene
+      firstFrame: 542
+      lastFrame: 572
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Scene
+      firstFrame: 573
+      lastFrame: 603
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Scene
+      firstFrame: 604
+      lastFrame: 639
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Scene
+      firstFrame: 639
+      lastFrame: 670
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.21
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,7 +11,7 @@ ModelImporter:
     second: idle
   - first:
       74: 6200578666267062213
-    second: run
+    second: flee
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -99,7 +99,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: run
+      name: flee
       takeName: Take 001
       internalID: 0
       firstFrame: 450
@@ -122,7 +122,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 1
+        functionName: NewEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

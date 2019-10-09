@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        Debug.Log("sup");
     }
 
     // Update is called once per frame

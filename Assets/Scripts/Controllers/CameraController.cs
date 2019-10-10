@@ -14,6 +14,12 @@ public class CameraController : MonoBehaviour
     public float currentYaw = 0f;
     private float currentZoom = 6f;
 
+    // public Transform pivot;
+
+    void Start() 
+    {
+        currentZoom = maxZoom - minZoom;
+    }
     void Update ()
     {
         currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
@@ -48,6 +54,7 @@ public class CameraController : MonoBehaviour
         // Debug.Log("currentZoom   " + currentZoom);
         // Debug.Log("scroll  " + Input.GetAxis("Mouse ScrollWheel"));
 
+        
     }
     void LateUpdate() {
         {

@@ -8,12 +8,14 @@ public class PlayerMotor : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        Debug.Log("sup");
+        playerController = GetComponent<PlayerController>();
+        // Debug.Log("sup");
     }
 
     // Update is called once per frame
@@ -28,7 +30,27 @@ public class PlayerMotor : MonoBehaviour
     }
     public void MoveToPoint(Vector3 point)
     {
+        // agent.velocity = playerController.velocity;
         agent.SetDestination(point);
+        
+
+        // if (!agent.pathPending)
+        // {
+        //     Debug.Log("test");
+        //     Debug.Log(agent.remainingDistance);
+        //     Debug.Log(agent.stoppingDistance);
+        //     if (agent.remainingDistance <= agent.stoppingDistance)
+        //     {
+        //         Debug.Log("test 2");
+        //         if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+        //         {
+        //             Debug.Log(agent.pathStatus);
+        //             playerController.enabled = true;
+        //         }
+        //     }
+        // }
+
+        
     }
 
     public void FollowTarget(Interactable newTarget)

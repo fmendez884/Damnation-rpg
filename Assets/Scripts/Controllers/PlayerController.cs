@@ -1,85 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(PlayerMotor))]
+
 public class PlayerController : MonoBehaviour
 {
-    public Interactable focus;
-    public LayerMask movementMask;
-    public Camera cam;
-    PlayerMotor motor;
+    // public Rigidbody theRB;
+    public float moveSpeed;
+    public float jumpForce = 20;
+    public float gravityScale;
+    public CharacterController controller;
+    public NavMeshAgent agent;
+
+    private Vector3 moveDirection;
+
     // Start is called before the first frame update
     void Start()
     {
-        motor = GetComponent<PlayerMotor>();
+        // Debug.Log("SUP");
+        // theRB = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        // Debug.Log(moveSpeed);
+        // theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
+
+        // if (Input.GetButtonDown("Jump"))
+        // {
+        //     theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
+        //     Debug.Log();
+        // }
+
+        moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
+
+        if (Input.GetButtonDown("Jump"))
         {
-            return;
+            // Debug.Log("jump");
+            moveDirection.y = jumpForce;
         }
 
-        // if we press left mouse
-        if (Input.GetMouseButtonDown(0))
-        {   
-            //we create a ray
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
 
-            // if the ray hits
-            if (Physics.Raycast(ray, out hit, 100, movementMask))
-            {
-                // Move our player to what we hit
-                Debug.Log("We hit" + hit.collider.name + " " + hit.point);
-                motor.MoveToPoint(hit.point);
-                // Stop focusing any objects
-                RemoveFocus();
-            }
-        }
-
-        if (Input.GetKeyDown("space")) // GetMousButtonDown(1) ; right click on mouse
+        if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f)
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                // Check if we hit an interactable
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-                // If we did set it as our focus
-                if (interactable != null)
-                {
-                    SetFocus(interactable);
-                }
-            }
+            agent.isStopped = true;
+            agent.ResetPath();
+            controller.Move(moveDirection * Time.deltaTime);
         }
-    }
-
-    void SetFocus(Interactable newFocus)
-    {
-        if (newFocus != focus)
-        {
-            if (focus != null)
-                focus.OnDefocused();
-                
-            focus = newFocus;
-            newFocus.OnFocused(transform);
-        }
-
-        motor.FollowTarget(newFocus);
-    }
-
-    void RemoveFocus()
-    {
-        if (focus != null)
-            focus.OnDefocused();
-
-        focus = null;
-        motor.StopFollowingTarget();
+        
     }
 }

@@ -796,6 +796,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6522405782334075037, guid: 4691fcb05014d45f6a4fb561ba72f232,
         type: 3}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: HeroCharacter
+      value: 
+      objectReference: {fileID: 1807290870651704446, guid: 0938c9eb4fdb54381a47212a54ed704f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ca7d33216c14688850411672fd7374, type: 3}
 --- !u!1 &866101275

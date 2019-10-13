@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1890807787876896126
+--- !u!1 &907362183660743996
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1890807787876896127}
-  - component: {fileID: 5983833025970528714}
+  - component: {fileID: 907362183660744001}
+  - component: {fileID: 907362183660744002}
+  - component: {fileID: 907362183660744003}
+  - component: {fileID: 907362183660744000}
+  - component: {fileID: 907362183660744007}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17,31 +20,81 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1890807787876896127
+--- !u!4 &907362183660744001
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890807787876896126}
+  m_GameObject: {fileID: 907362183660743996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13499999, y: 1.1100001, z: 0.3800006}
+  m_LocalPosition: {x: -12.16, y: -3.6950002, z: 11.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5983833025970528714
+--- !u!114 &907362183660744002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890807787876896126}
-  m_Enabled: 1
+  m_GameObject: {fileID: 907362183660743996}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c056ac6647efc4d9cbe006393da24f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroCharacter: {fileID: 653279308919801944, guid: 215c3f13ba31f41d8b457a0a157f4a46,
-    type: 3}
+  curRegion: {fileID: 0}
+  nextSpawnPoint: 
+  HeroCharacter: {fileID: 0}
+  nextHeroPosition: {x: 0, y: 0, z: 0}
+  lastHeroPosition: {x: 0, y: 0, z: 0}
+  sceneToLoad: 
+  lastScene: 
+  isWalking: 0
+  canGetEncounter: 0
+  gotAttacked: 0
+  gameState: 0
+  enemysToBattle: []
+  enemyAmount: 0
+--- !u!114 &907362183660744003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907362183660743996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6f671671b4445b8804e27f11250112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 20
+  items: []
+--- !u!114 &907362183660744000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907362183660743996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07653cfced2c7458ebe434d9dd8e15b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &907362183660744007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907362183660743996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740449044cf9246468a2c173f839ff98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}

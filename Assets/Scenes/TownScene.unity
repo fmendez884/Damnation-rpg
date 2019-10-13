@@ -187,21 +187,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1751599622939308721, guid: 777c0a61d7f02425ca8811e91899c436,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751599623064648060, guid: 777c0a61d7f02425ca8811e91899c436,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751599622658272225, guid: 777c0a61d7f02425ca8811e91899c436,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3168533615948692269, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
       propertyPath: sceneToLoad
@@ -211,6 +196,16 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPointName
       value: SP_Leave_Town1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751599622658272225, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751599622658272224, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: m_TagString
+      value: teleporter
       objectReference: {fileID: 0}
     - target: {fileID: 1751599622630491105, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
@@ -222,10 +217,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1751599622658272224, guid: 777c0a61d7f02425ca8811e91899c436,
+    - target: {fileID: 1751599622939308721, guid: 777c0a61d7f02425ca8811e91899c436,
         type: 3}
-      propertyPath: m_TagString
-      value: teleporter
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751599623064648060, guid: 777c0a61d7f02425ca8811e91899c436,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777c0a61d7f02425ca8811e91899c436, type: 3}
@@ -539,5 +539,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5983833025970528714, guid: f6ca7d33216c14688850411672fd7374,
+        type: 3}
+      propertyPath: HeroCharacter
+      value: 
+      objectReference: {fileID: 1807290870651704446, guid: 0938c9eb4fdb54381a47212a54ed704f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ca7d33216c14688850411672fd7374, type: 3}

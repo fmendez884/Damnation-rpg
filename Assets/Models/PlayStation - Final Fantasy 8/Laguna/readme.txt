@@ -1,0 +1,1 @@
+Many of the textures accompanying models from Final Fantasy VIII have transparency issues, in that areas that should be black are instead transparent.  This should be easily enough remedied by adjusting the alpha channel on the texture files.

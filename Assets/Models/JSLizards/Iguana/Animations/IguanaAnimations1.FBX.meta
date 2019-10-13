@@ -1,0 +1,2322 @@
+fileFormatVersion: 2
+guid: 2350bb493580b43e78ebfda6cecea595
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Breast_L
+  - first:
+      1: 100002
+    second: Breast_R
+  - first:
+      1: 100004
+    second: Calf_L
+  - first:
+      1: 100006
+    second: Calf_R
+  - first:
+      1: 100008
+    second: Clavicle_L
+  - first:
+      1: 100010
+    second: Clavicle_R
+  - first:
+      1: 100012
+    second: Eye_L
+  - first:
+      1: 100014
+    second: Eye_R
+  - first:
+      1: 100016
+    second: EyeParent_L
+  - first:
+      1: 100018
+    second: EyeParent_R
+  - first:
+      1: 100020
+    second: Finger_L.0
+  - first:
+      1: 100022
+    second: Finger_L.11
+  - first:
+      1: 100024
+    second: Finger_L.12
+  - first:
+      1: 100026
+    second: Finger_L.13
+  - first:
+      1: 100028
+    second: Finger_L.21
+  - first:
+      1: 100030
+    second: Finger_L.22
+  - first:
+      1: 100032
+    second: Finger_L.23
+  - first:
+      1: 100034
+    second: Finger_L.31
+  - first:
+      1: 100036
+    second: Finger_L.32
+  - first:
+      1: 100038
+    second: Finger_L.33
+  - first:
+      1: 100040
+    second: Finger_L.41
+  - first:
+      1: 100042
+    second: Finger_L.42
+  - first:
+      1: 100044
+    second: Finger_L.43
+  - first:
+      1: 100046
+    second: Finger_R.0
+  - first:
+      1: 100048
+    second: Finger_R.11
+  - first:
+      1: 100050
+    second: Finger_R.12
+  - first:
+      1: 100052
+    second: Finger_R.13
+  - first:
+      1: 100054
+    second: Finger_R.21
+  - first:
+      1: 100056
+    second: Finger_R.22
+  - first:
+      1: 100058
+    second: Finger_R.23
+  - first:
+      1: 100060
+    second: Finger_R.31
+  - first:
+      1: 100062
+    second: Finger_R.32
+  - first:
+      1: 100064
+    second: Finger_R.33
+  - first:
+      1: 100066
+    second: Finger_R.41
+  - first:
+      1: 100068
+    second: Finger_R.42
+  - first:
+      1: 100070
+    second: Finger_R.43
+  - first:
+      1: 100072
+    second: FirstEyelid_L
+  - first:
+      1: 100074
+    second: FirstEyelid_R
+  - first:
+      1: 100076
+    second: Foot_L
+  - first:
+      1: 100078
+    second: Foot_R
+  - first:
+      1: 100080
+    second: Forearm_L
+  - first:
+      1: 100082
+    second: Forearm_R
+  - first:
+      1: 100084
+    second: Gularskin
+  - first:
+      1: 100086
+    second: Hand_L
+  - first:
+      1: 100088
+    second: Hand_R
+  - first:
+      1: 100090
+    second: Head
+  - first:
+      1: 100092
+    second: //RootNode
+  - first:
+      1: 100094
+    second: IguanaDummy
+  - first:
+      1: 100096
+    second: Jaw
+  - first:
+      1: 100098
+    second: Jaw.1
+  - first:
+      1: 100100
+    second: Neck.1
+  - first:
+      1: 100102
+    second: Neck.2
+  - first:
+      1: 100104
+    second: Pelvis
+  - first:
+      1: 100106
+    second: Root
+  - first:
+      1: 100108
+    second: SecondEyelid_L
+  - first:
+      1: 100110
+    second: SecondEyelid_R
+  - first:
+      1: 100112
+    second: Spine.1
+  - first:
+      1: 100114
+    second: Spine.2
+  - first:
+      1: 100116
+    second: Spine.3
+  - first:
+      1: 100118
+    second: Tail.1
+  - first:
+      1: 100120
+    second: Tail.2
+  - first:
+      1: 100122
+    second: Tail.3
+  - first:
+      1: 100124
+    second: Tail.4
+  - first:
+      1: 100126
+    second: Tail.5
+  - first:
+      1: 100128
+    second: Tail.6
+  - first:
+      1: 100130
+    second: Tail.7
+  - first:
+      1: 100132
+    second: Thigh_L
+  - first:
+      1: 100134
+    second: Thigh_R
+  - first:
+      1: 100136
+    second: Toe_L.01
+  - first:
+      1: 100138
+    second: Toe_L.02
+  - first:
+      1: 100140
+    second: Toe_L.03
+  - first:
+      1: 100142
+    second: Toe_L.11
+  - first:
+      1: 100144
+    second: Toe_L.12
+  - first:
+      1: 100146
+    second: Toe_L.13
+  - first:
+      1: 100148
+    second: Toe_L.14
+  - first:
+      1: 100150
+    second: Toe_L.21
+  - first:
+      1: 100152
+    second: Toe_L.22
+  - first:
+      1: 100154
+    second: Toe_L.23
+  - first:
+      1: 100156
+    second: Toe_L.31
+  - first:
+      1: 100158
+    second: Toe_L.32
+  - first:
+      1: 100160
+    second: Toe_L.41
+  - first:
+      1: 100162
+    second: Toe_L.42
+  - first:
+      1: 100164
+    second: Toe_R.01
+  - first:
+      1: 100166
+    second: Toe_R.02
+  - first:
+      1: 100168
+    second: Toe_R.03
+  - first:
+      1: 100170
+    second: Toe_R.11
+  - first:
+      1: 100172
+    second: Toe_R.12
+  - first:
+      1: 100174
+    second: Toe_R.13
+  - first:
+      1: 100176
+    second: Toe_R.14
+  - first:
+      1: 100178
+    second: Toe_R.21
+  - first:
+      1: 100180
+    second: Toe_R.22
+  - first:
+      1: 100182
+    second: Toe_R.23
+  - first:
+      1: 100184
+    second: Toe_R.31
+  - first:
+      1: 100186
+    second: Toe_R.32
+  - first:
+      1: 100188
+    second: Toe_R.41
+  - first:
+      1: 100190
+    second: Toe_R.42
+  - first:
+      1: 100192
+    second: Tongue.1
+  - first:
+      1: 100194
+    second: Tongue.2
+  - first:
+      1: 100196
+    second: UpperArm_L
+  - first:
+      1: 100198
+    second: UpperArm_R
+  - first:
+      4: 400000
+    second: Breast_L
+  - first:
+      4: 400002
+    second: Breast_R
+  - first:
+      4: 400004
+    second: Calf_L
+  - first:
+      4: 400006
+    second: Calf_R
+  - first:
+      4: 400008
+    second: Clavicle_L
+  - first:
+      4: 400010
+    second: Clavicle_R
+  - first:
+      4: 400012
+    second: Eye_L
+  - first:
+      4: 400014
+    second: Eye_R
+  - first:
+      4: 400016
+    second: EyeParent_L
+  - first:
+      4: 400018
+    second: EyeParent_R
+  - first:
+      4: 400020
+    second: Finger_L.0
+  - first:
+      4: 400022
+    second: Finger_L.11
+  - first:
+      4: 400024
+    second: Finger_L.12
+  - first:
+      4: 400026
+    second: Finger_L.13
+  - first:
+      4: 400028
+    second: Finger_L.21
+  - first:
+      4: 400030
+    second: Finger_L.22
+  - first:
+      4: 400032
+    second: Finger_L.23
+  - first:
+      4: 400034
+    second: Finger_L.31
+  - first:
+      4: 400036
+    second: Finger_L.32
+  - first:
+      4: 400038
+    second: Finger_L.33
+  - first:
+      4: 400040
+    second: Finger_L.41
+  - first:
+      4: 400042
+    second: Finger_L.42
+  - first:
+      4: 400044
+    second: Finger_L.43
+  - first:
+      4: 400046
+    second: Finger_R.0
+  - first:
+      4: 400048
+    second: Finger_R.11
+  - first:
+      4: 400050
+    second: Finger_R.12
+  - first:
+      4: 400052
+    second: Finger_R.13
+  - first:
+      4: 400054
+    second: Finger_R.21
+  - first:
+      4: 400056
+    second: Finger_R.22
+  - first:
+      4: 400058
+    second: Finger_R.23
+  - first:
+      4: 400060
+    second: Finger_R.31
+  - first:
+      4: 400062
+    second: Finger_R.32
+  - first:
+      4: 400064
+    second: Finger_R.33
+  - first:
+      4: 400066
+    second: Finger_R.41
+  - first:
+      4: 400068
+    second: Finger_R.42
+  - first:
+      4: 400070
+    second: Finger_R.43
+  - first:
+      4: 400072
+    second: FirstEyelid_L
+  - first:
+      4: 400074
+    second: FirstEyelid_R
+  - first:
+      4: 400076
+    second: Foot_L
+  - first:
+      4: 400078
+    second: Foot_R
+  - first:
+      4: 400080
+    second: Forearm_L
+  - first:
+      4: 400082
+    second: Forearm_R
+  - first:
+      4: 400084
+    second: Gularskin
+  - first:
+      4: 400086
+    second: Hand_L
+  - first:
+      4: 400088
+    second: Hand_R
+  - first:
+      4: 400090
+    second: Head
+  - first:
+      4: 400092
+    second: //RootNode
+  - first:
+      4: 400094
+    second: IguanaDummy
+  - first:
+      4: 400096
+    second: Jaw
+  - first:
+      4: 400098
+    second: Jaw.1
+  - first:
+      4: 400100
+    second: Neck.1
+  - first:
+      4: 400102
+    second: Neck.2
+  - first:
+      4: 400104
+    second: Pelvis
+  - first:
+      4: 400106
+    second: Root
+  - first:
+      4: 400108
+    second: SecondEyelid_L
+  - first:
+      4: 400110
+    second: SecondEyelid_R
+  - first:
+      4: 400112
+    second: Spine.1
+  - first:
+      4: 400114
+    second: Spine.2
+  - first:
+      4: 400116
+    second: Spine.3
+  - first:
+      4: 400118
+    second: Tail.1
+  - first:
+      4: 400120
+    second: Tail.2
+  - first:
+      4: 400122
+    second: Tail.3
+  - first:
+      4: 400124
+    second: Tail.4
+  - first:
+      4: 400126
+    second: Tail.5
+  - first:
+      4: 400128
+    second: Tail.6
+  - first:
+      4: 400130
+    second: Tail.7
+  - first:
+      4: 400132
+    second: Thigh_L
+  - first:
+      4: 400134
+    second: Thigh_R
+  - first:
+      4: 400136
+    second: Toe_L.01
+  - first:
+      4: 400138
+    second: Toe_L.02
+  - first:
+      4: 400140
+    second: Toe_L.03
+  - first:
+      4: 400142
+    second: Toe_L.11
+  - first:
+      4: 400144
+    second: Toe_L.12
+  - first:
+      4: 400146
+    second: Toe_L.13
+  - first:
+      4: 400148
+    second: Toe_L.14
+  - first:
+      4: 400150
+    second: Toe_L.21
+  - first:
+      4: 400152
+    second: Toe_L.22
+  - first:
+      4: 400154
+    second: Toe_L.23
+  - first:
+      4: 400156
+    second: Toe_L.31
+  - first:
+      4: 400158
+    second: Toe_L.32
+  - first:
+      4: 400160
+    second: Toe_L.41
+  - first:
+      4: 400162
+    second: Toe_L.42
+  - first:
+      4: 400164
+    second: Toe_R.01
+  - first:
+      4: 400166
+    second: Toe_R.02
+  - first:
+      4: 400168
+    second: Toe_R.03
+  - first:
+      4: 400170
+    second: Toe_R.11
+  - first:
+      4: 400172
+    second: Toe_R.12
+  - first:
+      4: 400174
+    second: Toe_R.13
+  - first:
+      4: 400176
+    second: Toe_R.14
+  - first:
+      4: 400178
+    second: Toe_R.21
+  - first:
+      4: 400180
+    second: Toe_R.22
+  - first:
+      4: 400182
+    second: Toe_R.23
+  - first:
+      4: 400184
+    second: Toe_R.31
+  - first:
+      4: 400186
+    second: Toe_R.32
+  - first:
+      4: 400188
+    second: Toe_R.41
+  - first:
+      4: 400190
+    second: Toe_R.42
+  - first:
+      4: 400192
+    second: Tongue.1
+  - first:
+      4: 400194
+    second: Tongue.2
+  - first:
+      4: 400196
+    second: UpperArm_L
+  - first:
+      4: 400198
+    second: UpperArm_R
+  - first:
+      74: 7400000
+    second: WalkForward
+  - first:
+      74: 7400002
+    second: WalkRight
+  - first:
+      74: 7400004
+    second: WalkLeft
+  - first:
+      74: 7400006
+    second: WalkBack
+  - first:
+      74: 7400008
+    second: Idle
+  - first:
+      74: 7400010
+    second: Attack
+  - first:
+      74: 7400012
+    second: Hit
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WalkForward
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 10
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkRight
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 50
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkLeft
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 90
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkBack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 130
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 170
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 210
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 250
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IguanaDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Breast_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.11/Finger_L.12/Finger_L.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.21/Finger_L.22/Finger_L.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.31/Finger_L.32/Finger_L.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L/Finger_L.41/Finger_L.42/Finger_L.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.0
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.11/Finger_R.12/Finger_R.13
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.21/Finger_R.22/Finger_R.23
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.31/Finger_R.32/Finger_R.33
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R/Finger_R.41/Finger_R.42/Finger_R.43
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/FirstEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_L/SecondEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/FirstEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/EyeParent_R/SecondEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Gularskin
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Head/Jaw.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2/Tail.3/Tail.4/Tail.5/Tail.6/Tail.7
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.01/Toe_L.02/Toe_L.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.11/Toe_L.12/Toe_L.13/Toe_L.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.21/Toe_L.22/Toe_L.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.31/Toe_L.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/Foot_L/Toe_L.41/Toe_L.42
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.01/Toe_R.02/Toe_R.03
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.11/Toe_R.12/Toe_R.13/Toe_R.14
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.21/Toe_R.22/Toe_R.23
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.31/Toe_R.32
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/Foot_R/Toe_R.41/Toe_R.42
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

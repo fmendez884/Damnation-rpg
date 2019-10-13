@@ -1,0 +1,68 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 14.08.2011 03:53:31
+
+newmtl 01___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_01.png
+	map_Kd C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_01.png
+
+newmtl 02___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_02.png
+	map_Kd C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_02.png
+
+newmtl 03___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_00.png
+	map_Kd C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_00.png
+
+newmtl wire_134110008
+	Ns 32
+	d 1
+	Tr 1
+	Tf 1 1 1
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5255 0.4314 0.0314
+	Ks 0.3500 0.3500 0.3500
+
+newmtl 07___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_03.png
+	map_Kd C:\Users\Chris\Desktop\Dlc Cecil\Cecil Paladin\diss_03.png

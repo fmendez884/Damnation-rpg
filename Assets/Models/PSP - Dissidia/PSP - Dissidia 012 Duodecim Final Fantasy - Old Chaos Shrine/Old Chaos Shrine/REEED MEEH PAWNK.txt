@@ -1,0 +1,5 @@
+The models have upside down UVs. Mirror the Y axis to fix them.
+They may also be pre-posed. That shouldn't be too much of a problem, hopefully.
+
+I take no credit for the models, yadda yadda.
+Ripped with mesh2rdm by that one guy.

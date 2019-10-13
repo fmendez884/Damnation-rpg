@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;
+    public Transform enemyTarget;
     public Vector3 offset;
     public float zoomSpeed = 4f;
     public float minZoom = 5f;
@@ -39,14 +40,14 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Debug.Log("KeyUp  " + currentZoom);
+            //Debug.Log("KeyUp  " + currentZoom);
             currentZoom -= 1f * zoomSpeed * Time.deltaTime;
             currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Debug.Log("KeyDown  " + currentZoom);
+            //Debug.Log("KeyDown  " + currentZoom);
             currentZoom -= -1f * zoomSpeed * Time.deltaTime;
             currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
         }
@@ -58,10 +59,20 @@ public class CameraController : MonoBehaviour
     }
     void LateUpdate() {
         {
-            transform.position = target.position - offset * currentZoom;
-            transform.LookAt(target.position + Vector3.up * pitch);
+            if (enemyTarget == null)
+            {
+                transform.position = target.position - offset * currentZoom;
+                transform.LookAt(target.position + Vector3.up * pitch);
 
-            transform.RotateAround(target.position, Vector3.up, currentYaw);
+                transform.RotateAround(target.position, Vector3.up, currentYaw);
+            }
+            else
+            {
+                transform.position = target.position - offset * currentZoom;
+                transform.LookAt(enemyTarget.position + Vector3.up * pitch);
+
+                transform.RotateAround(target.position, Vector3.up, currentYaw);
+            }
         }
     }
 

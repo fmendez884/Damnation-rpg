@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244963493518901205}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1350, y: -16050, z: -450}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1349.9999, y: -16049.999, z: -450.00076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 326011466105893714}
@@ -614,7 +614,7 @@ Animator:
   m_GameObject: {fileID: 2918149526041712630}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ed1fef58e99f149ef917b616e2afa7fc, type: 3}
-  m_Controller: {fileID: 9100000, guid: ccba99abb20934f8196e3e34cfdd4623, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -951,6 +951,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   cam: {fileID: 0}
+  controller: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!114 &6583898297543899514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,6 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77834c21c03f849d7b729309c03589d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
 --- !u!114 &6583898297543899515
 MonoBehaviour:
   m_ObjectHideFlags: 0

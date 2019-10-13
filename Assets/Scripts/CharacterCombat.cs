@@ -22,16 +22,17 @@ public class CharacterCombat : MonoBehaviour
     {
         attackCooldown -= Time.deltaTime;
     }
-    public void Attack (CharacterStats targetStats)
+
+    public virtual void Attack (CharacterStats targetStats)
     {
-        if (attackCooldown <= 0f)
-        {
-            StartCoroutine(DoDamage(targetStats, attackDelay));
+        //if (attackCooldown <= 0f)
+        //{
+        //    StartCoroutine(DoDamage(targetStats, attackDelay));
             
-            if (onAttack != null)
-                // OnAttack(); 
-            attackCooldown = 1f / attackSpeed;
-        }
+        //    if (onAttack != null)
+        //        // OnAttack(); 
+        //    attackCooldown = 1f / attackSpeed;
+        //}
     }
 
     IEnumerator DoDamage(CharacterStats stats, float delay)

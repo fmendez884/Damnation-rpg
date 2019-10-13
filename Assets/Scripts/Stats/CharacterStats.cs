@@ -16,18 +16,19 @@ public class CharacterStats : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(10);
+            //TakeDamage(10);
         }
     }
 
-    public void TakeDamage ( int damage )
+    public virtual void TakeDamage ( int damage )
     {
-        //calculate damge 
-        damage -= armor.GetValue();
-        damage = Mathf.Clamp(damage, 0, int.MaxValue);
+        ////calculate damge 
+        //damage -= armor.GetValue();
+        //damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
-        currentHealth -= damage;
-        Debug.Log(transform.name + "takes" + damage + " damage.");
+        //currentHealth -= damage;
+        //Debug.Log(transform.name + "takes" + damage + " damage.");
+        //Debug.Log(currentHealth);
 
         if (currentHealth <= 0)
         {

@@ -26,7 +26,7 @@ public class enemyInView : MonoBehaviour {
         if (onScreen && addOnlyOnce)
         {
             addOnlyOnce = false;           
-            targetController.nearByEnemies.Add(this);
+            targetController.nearByEnemies.Add(gameObject);
         }     
     }     
 }

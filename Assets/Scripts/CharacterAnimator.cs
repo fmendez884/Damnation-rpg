@@ -27,4 +27,9 @@ public class CharacterAnimator : MonoBehaviour
         animator.SetTrigger("attack");
     }
 
+    public void Magic()
+    {
+        animator.SetTrigger("magic");
+    }
+
 }

@@ -7,7 +7,7 @@ public class targetController : MonoBehaviour {
 
     Camera cam; //Main Camera
     CameraController camController;
-    enemyInView target; //Current Focused Enemy In List
+    public GameObject target; //Current Focused Enemy In List
     Image image;//Image Of Crosshair
     public AnimationCurve myCurve;
     public Vector3 objOffset = new Vector3(0,1,0);
@@ -15,8 +15,8 @@ public class targetController : MonoBehaviour {
     public float reticleHeight;
     CapsuleCollider targetCollider;
     public PlayerController playerController;
-    KeyCode targetInputKey = KeyCode.C;
-    KeyCode switchTargetInputKey = KeyCode.Tab;
+    readonly KeyCode targetInputKey = KeyCode.Q;
+    readonly KeyCode switchTargetInputKey = KeyCode.Tab;
 
 
 
@@ -26,7 +26,7 @@ public class targetController : MonoBehaviour {
     int lockedEnemy;
 
     //List of nearby enemies
-    public static List<enemyInView> nearByEnemies = new List<enemyInView>();
+    public static List<GameObject> nearByEnemies = new List<GameObject>();
 
     void Start () {
         cam = Camera.main;
@@ -39,9 +39,11 @@ public class targetController : MonoBehaviour {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }  
 
-    void Update () {       
+    void Update () {
 
-        //Press Space Key To Lock On
+        //checkEnemyList();
+
+        //Press Key To Lock On
         if (Input.GetKeyDown(targetInputKey) && !lockedOn)
         {
             if (nearByEnemies.Count >= 1)
@@ -53,7 +55,9 @@ public class targetController : MonoBehaviour {
                 lockedEnemy = 0;
                 target = nearByEnemies[lockedEnemy];
             }
+            
         }
+
         //Turn Off Lock On When Space Is Pressed Or No More Enemies Are In The List
         else if ((Input.GetKeyDown(targetInputKey) && lockedOn) || nearByEnemies.Count == 0)
         {
@@ -120,6 +124,24 @@ public class targetController : MonoBehaviour {
         Vector3 direction = (target.transform.position - playerController.transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         playerController.transform.rotation = Quaternion.Slerp(playerController.transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    //public void checkEnemyList()
+    //{
+
+    //    for (int i = 0; i < nearByEnemies.Count; ++i)
+    //    {
+    //        if (nearByEnemies[i].activeSelf == false)
+    //        {
+    //            nearByEnemies.Remove(nearByEnemies[i]);
+
+    //        }
+    //    }
+    //}
+
+    public void removeTarget()
+    {
+        target = null;
     }
 
 

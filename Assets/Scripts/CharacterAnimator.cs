@@ -24,12 +24,22 @@ public class CharacterAnimator : MonoBehaviour
 
     public void Attack()
     {
-        animator.SetTrigger("attack");
+        animator.SetTrigger("Attack");
     }
 
     public void Magic()
     {
-        animator.SetTrigger("magic");
+        animator.SetTrigger("Magic");
+    }
+
+    public void Damage()
+    {
+        animator.SetTrigger("Damage");
+    }
+
+    public void Death()
+    {
+        animator.SetTrigger("Death");
     }
 
 }

@@ -8,9 +8,9 @@ public class targetController : MonoBehaviour {
     Camera cam; //Main Camera
     CameraController camController;
     public GameObject target; //Current Focused Enemy In List
-    Image image;//Image Of Crosshair
+    public Image image;//Image Of Crosshair
     public AnimationCurve myCurve;
-    public Vector3 objOffset = new Vector3(0,1,0);
+    public Vector3 objOffset = new Vector3(0, 1, 0);
     public float objOffsetY = 1.2f;
     public float reticleHeight;
     CapsuleCollider targetCollider;
@@ -28,7 +28,8 @@ public class targetController : MonoBehaviour {
     //List of nearby enemies
     public static List<GameObject> nearByEnemies = new List<GameObject>();
 
-    void Start () {
+    void Start()
+    {
         cam = Camera.main;
         camController = cam.GetComponent<CameraController>();
 
@@ -37,9 +38,10 @@ public class targetController : MonoBehaviour {
         lockedOn = false;
         lockedEnemy = 0;
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
-    }  
+    }
 
-    void Update () {
+    void Update()
+    {
 
         //checkEnemyList();
 
@@ -55,7 +57,7 @@ public class targetController : MonoBehaviour {
                 lockedEnemy = 0;
                 target = nearByEnemies[lockedEnemy];
             }
-            
+
         }
 
         //Turn Off Lock On When Space Is Pressed Or No More Enemies Are In The List
@@ -83,8 +85,8 @@ public class targetController : MonoBehaviour {
                 //Move To Next Enemy In List
                 lockedEnemy++;
                 target = nearByEnemies[lockedEnemy];
-            }           
-        }      
+            }
+        }
 
         if (lockedOn)
         {
@@ -109,7 +111,7 @@ public class targetController : MonoBehaviour {
             //Rotate Crosshair
             // gameObject.transform.Rotate(new Vector3(0, 0, -1));
             // gameObject.transform.position = new Vector3(transform.position.x, myCurve.Evaluate((Time.time % myCurve.length)), transform.position.z);
-        }             
+        }
     }
 
     void CalculateReticleHeight()
@@ -144,5 +146,157 @@ public class targetController : MonoBehaviour {
         target = null;
     }
 
+    //================================================
+    ////Lock On Script
+    ////================================================
+    //int current;
+    //bool locked;
+
+    //GameObject[] enemies;
+    //GameObject closestEnemy;
+    //Transform reticle; //Current targeted enemy indicator
+
+
+    //public void Update()
+    //{
+
+    //    if (closest != null & amp; &amp; locked)
+
+    //    {
+    //        activeIcon.active = true;
+    //        activeIcon.transform.position.y = (closest.transform.position.y + 1);
+    //        activeIcon.transform.position.x = (closest.transform.position.x);
+    //        activeIcon.transform.position.z = (closest.transform.position.z);
+    //    }
+    //    else
+    //    {
+    //        activeIcon.active = false;
+    //    }
+
+
+    //    if (Input.GetButtonDown("Lock"))
+    //    {
+    //        //Looks for the closest enemy
+    //        FindClosestEnemy();
+    //        locked = !locked;
+    //    }
+    //    if (locked)
+    //    {
+    //        //If there aren't any enemies (or the player killed the last one targeted) make sure that the lock is false
+    //        if (!closest)
+    //        {
+    //            activeIcon.active = false;
+    //            locked = false;
+    //            closest = null;
+    //        }
+    //        if (playerController.isAttacking)
+    //            transform.LookAt(Vector3(closest.transform.position.x, transform.position.y, closest.transform.position.z));
+    //    }
+
+    //}
+
+
+    //public GameObject FindClosestEnemy()
+    //{
+    //    // Find all game objects with tag Enemy
+    //    GameObject[] enemyLocations = GameObject.FindGameObjectsWithTag("Enemy");
+    //    //var closest : GameObject; 
+    //    var distance = Mathf.Infinity;
+    //    var position = transform.position;
+    //    // Iterate through them and find the closest one
+    //    foreach (GameObject enemy in enemyLocations)
+    //    {
+    //        var diff = (enemy.transform.position - position);
+    //        var curDistance = diff.sqrMagnitude;
+    //    }
+
+    //    if (float curDistance & lt; distance) 
+    //{
+    //        GameObject closest = enemy;
+    //        distance = curDistance;
+    //    }
+
+    //    return closest;
+
+
+
+    //}
+
+
+//    //================================================
+//    //Lock On Script
+//    //================================================
+//    private var current : int = 0; 
+//private var locked : boolean = false; 
+//var playerController : ThirdPersonController ;
+//var enemyLocations : GameObject[];
+//var closest : GameObject;
+//var activeIcon : Transform; //Current targeted enemy indicator
+
+
+//function Update()
+//    {
+//        var playerController : ThirdPersonController = GetComponent(ThirdPersonController);
+
+
+//        if (closest != null & amp; &amp; locked)
+
+//{
+//            activeIcon.active = true;
+//            activeIcon.transform.position.y = (closest.transform.position.y + 1);
+//            activeIcon.transform.position.x = (closest.transform.position.x);
+//            activeIcon.transform.position.z = (closest.transform.position.z);
+//        }
+//else
+//        {
+//            activeIcon.active = false;
+//        }
+
+
+//        if (Input.GetButtonDown("Lock"))
+//        {
+//            //Looks for the closest enemy
+//            FindClosestEnemy();
+//            locked = !locked;
+//        }
+//        if (locked)
+//        {
+//            //If there aren't any enemies (or the player killed the last one targeted) make sure that the lock is false
+//            if (!closest)
+//            {
+//                activeIcon.active = false;
+//                locked = false;
+//                closest = null;
+//            }
+//            if (playerController.isAttacking)
+//                transform.LookAt(Vector3(closest.transform.position.x, transform.position.y, closest.transform.position.z));
+//        }
+
+//    }
+
+
+//    function FindClosestEnemy() : GameObject 
+//    {
+//        // Find all game objects with tag Enemy
+//        enemyLocations = GameObject.FindGameObjectsWithTag("Enemy"); 
+//        //var closest : GameObject; 
+//        var distance = Mathf.Infinity;
+//        var position = transform.position; 
+//        // Iterate through them and find the closest one
+//        for (var go : GameObject in enemyLocations) 
+//            { 
+//                var diff = (go.transform.position - position);
+//        var curDistance = diff.sqrMagnitude; 
+
+
+//             if (curDistance &lt; distance) 
+//             { 
+//                 closest = go; 
+//                 distance = curDistance; 
+//             } 
+//         } 
+//     return closest; 
+
+//    }
 
 }

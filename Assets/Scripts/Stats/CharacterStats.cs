@@ -2,6 +2,7 @@
 
 public class CharacterStats : MonoBehaviour
 {
+    public string name;
     public int maxHealth = 100;
     public int currentHealth;
     public Stat damage;
@@ -32,16 +33,16 @@ public class CharacterStats : MonoBehaviour
 
 
 
-        if (currentHealth >= 0 || currentHealth == 0)
-        {
-            Die();
-        }
+        //if (currentHealth >= 0 || currentHealth == 0)
+        //{
+        //    Die();
+        //}
     }
 
     public virtual void Die () 
     {
         // Die in some way 
         //This method is meant to be overriddeen 
-        Debug.Log(transform.name + " has died.");
+        Debug.Log(name + " has died.");
     }
 }

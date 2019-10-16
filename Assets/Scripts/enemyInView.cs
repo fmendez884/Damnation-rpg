@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyInView : MonoBehaviour {
+public class enemyInView : MonoBehaviour
+{
 
     Camera cam;//Camera Used To Detect Enemies On Screen      
     bool addOnlyOnce;//This Boolean Is Used To Only Allow The Enemy To Be Added To The List Once
@@ -14,7 +15,8 @@ public class enemyInView : MonoBehaviour {
         collider = GetComponent<CapsuleCollider>();
     }  
 
-    void Update () {
+    void Update ()
+    {
 
         //First Create A Vector3 With Dimensions Based On The Camera's Viewport
         Vector3 enemyPosition = cam.WorldToViewportPoint(collider.transform.position);
@@ -28,5 +30,7 @@ public class enemyInView : MonoBehaviour {
             addOnlyOnce = false;           
             targetController.nearByEnemies.Add(gameObject);
         }     
-    }     
+    }
+
+
 }

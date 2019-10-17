@@ -6,7 +6,9 @@ public class EnemyStats : CharacterStats
 {
 
     string enemyName;
-    public targetController targetController;
+    public TargetController targetController;
+
+    //public targetController1 targetController;
     public CharacterAnimator characterAnimator;
     float deathTime = 4f;
 
@@ -15,7 +17,11 @@ public class EnemyStats : CharacterStats
     private void Start()
     {
         enemyName = name;
-        targetController = GameObject.Find("GameManager").GetComponentInChildren<targetController>();
+        targetController = GameObject.Find("TargetSystem").GetComponentInChildren<TargetController>();
+
+        //targetController = GameObject.Find("GameManager").GetComponentInChildren<targetController1>();
+        //targetController = GameObject.Find("GameManager").GetComponentInChildren<TargetController>();
+
         characterAnimator = GetComponent<CharacterAnimator>();
 
     }
@@ -24,7 +30,10 @@ public class EnemyStats : CharacterStats
     {
         base.TakeDamage(damage);
 
-        if (currentHealth >= 0 || currentHealth == 0)
+        damage = Mathf.Clamp(damage, 0, int.MaxValue);
+        currentHealth -= damage;
+
+        if (currentHealth <= 0 || currentHealth == 0)
         {
             Die();
         }
@@ -33,8 +42,8 @@ public class EnemyStats : CharacterStats
         {
             characterAnimator.Damage();
 
-            damage = Mathf.Clamp(damage, 0, int.MaxValue);
-            currentHealth -= damage;
+            //damage = Mathf.Clamp(damage, 0, int.MaxValue);
+            //currentHealth -= damage;
             Debug.Log("Player Damages " + name + " for " + damage + " damage!");
             Debug.Log(name + " HP: " + currentHealth);
 
@@ -76,7 +85,9 @@ public class EnemyStats : CharacterStats
         float deathTime = 5f;
 
         targetController.target = null;
-        targetController.nearByEnemies.Remove(gameObject);
+        TargetController.nearByEnemies.Remove(gameObject);
+        //targetController1.nearByEnemies.Remove(gameObject);
+
 
         StartCoroutine(DeathSequence());
 

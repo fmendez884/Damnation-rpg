@@ -199,7 +199,7 @@ public class PlayerCombat : MonoBehaviour
         //calculateDamage(enemyState);
         enemyState.enemyStats.TakeDamage(calculateDamage(enemyState));
         //Debug.Log("Player Damages " + hitDetection.enemyTarget.name + " for " + calculateDamage(enemyState) + " damage!");
-         
+
     }
 
     public int calculateDamage(EnemyState enemyState)

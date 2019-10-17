@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     KeyCode AttackKey = KeyCode.X;
     KeyCode MagicKey = KeyCode.C;
+    KeyCode ResetKey = KeyCode.R;
 
     // Start is called before the first frame update
     void Start()
@@ -141,12 +142,13 @@ public class PlayerController : MonoBehaviour
         // Move the player in different directions based on the camera directionf
 
         //if (Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.RightCommand))
+
         if (Input.GetKeyDown(AttackKey))
         {
             ResetAgent();
 
             PlayerAttack();
-            //animator.SetTrigger("attack");
+            //animator.SetTrigger("Attack");
         }
 
         if (Input.GetKeyDown(MagicKey))
@@ -154,7 +156,14 @@ public class PlayerController : MonoBehaviour
             ResetAgent();
 
             PlayerCastMagic();
-            //animator.SetTrigger("attack");
+            //animator.SetTrigger("Magic");
+        }
+
+        if (Input.GetKeyDown(ResetKey))
+        {
+            ResetAgent();
+
+            PlayerManager.instance.KillPlayer();
         }
 
         animator.SetBool("isGrounded", controller.isGrounded);

@@ -52,6 +52,26 @@ public class HitDetection : MonoBehaviour
     //        enemyTarget = null;
     //}
 
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    // Debug.Log(other);
+    //    // Debug.Log("tag  " + other.tag);
+    //    if (other.tag == "Enemy")
+    //    {
+    //        hitDetected = true;
+    //        Debug.Log("Hit Detected on  " + other);
+    //        enemyTarget = other.gameObject;
+    //        //enemyTarget.GetComponent<EnemyStats>().TakeDamage(10);
+    //        enemyState = enemyTarget.GetComponent<EnemyState>();
+    //        playerCombat.DealDamage(enemyState);
+
+    //    }
+    //    else
+    //        enemyTarget = null;
+    //}
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         // Debug.Log(other);
@@ -63,10 +83,36 @@ public class HitDetection : MonoBehaviour
             enemyTarget = other.gameObject;
             //enemyTarget.GetComponent<EnemyStats>().TakeDamage(10);
             enemyState = enemyTarget.GetComponent<EnemyState>();
-            playerCombat.DealDamage(enemyState);
+
+            float attackTime = .23f;
+
+            StartCoroutine(DamageSequence());
+
+            // Add ragdoll effect / death animation
+            //characterAnimator.Death();
+            //targetController.removeTarget();;
+            //targetController.target = null;
+            //targetController.nearByEnemies.Remove(gameObject);
+
+            IEnumerator DamageSequence()
+            {
+                // - After 0 seconds, prints "Starting 0.0"
+                // - After 2 seconds, prints "WaitAndPrint 2.0"
+                // - After 2 seconds, prints "Done 2.0"
+                //characterAnimator.Death();
+
+                // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+                // the same as yield WaitAndPrint(2.0);
+                yield return new WaitForSeconds(attackTime * Time.deltaTime);
+                //print("Done " + Time.time);
+                playerCombat.DealDamage(enemyState);
+
+            }
+            
 
         }
         else
             enemyTarget = null;
     }
+    
 }

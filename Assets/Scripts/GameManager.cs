@@ -59,11 +59,11 @@ public class GameManager : MonoBehaviour
         }
         // set this to be not destroyable
         DontDestroyOnLoad(gameObject);
-        if (!GameObject.Find("HeroCharacter"));
-        {
-            GameObject Hero = Instantiate(HeroCharacter, nextHeroPosition, Quaternion.identity) as GameObject;
-            Hero.name = "HeroCharacter";
-        }
+        //if (!GameObject.Find("HeroCharacter"));
+        //{
+        //    GameObject Hero = Instantiate(HeroCharacter, nextHeroPosition, Quaternion.identity) as GameObject;
+        //    Hero.name = "HeroCharacter";
+        //}
     }
 
     void Update()
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
             enemysToBattle.Add(curRegion.possibleEnemys[Random.Range(0, curRegion.possibleEnemys.Count)]);
         }
         //HERO
-        lastHeroPosition = GameObject.Find("HeroCharacter").gameObject.transform.position;
+        //lastHeroPosition = GameObject.Find("HeroCharacter").gameObject.transform.position;
         nextHeroPosition = lastHeroPosition;
         lastScene = SceneManager.GetActiveScene().name;
         //RESET HERO

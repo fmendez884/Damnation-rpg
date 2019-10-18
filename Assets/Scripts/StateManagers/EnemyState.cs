@@ -41,10 +41,13 @@ public class EnemyState : MonoBehaviour
             case State.IDLE:
                 break;
             case State.ATTACK:
+
                 break;
             case State.DAMAGE:
                 break;
             case State.DEAD:
+                //agent.speed = 0;
+                //enemyStats.Die();
                 break;
         }
     }

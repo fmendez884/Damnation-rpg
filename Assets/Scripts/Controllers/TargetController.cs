@@ -121,7 +121,7 @@ public class TargetController : MonoBehaviour
                     image.transform.position = cam.WorldToScreenPoint(new Vector3(targetCollider.transform.position.x, reticleHeight, targetCollider.transform.position.z));
 
                     camController.enemyTarget = target.transform;
-
+                    
                     //playerController.target = target.transform;
                     FaceTarget(target.transform);
 
@@ -231,9 +231,14 @@ public class TargetController : MonoBehaviour
 
 
             //addOnlyOnce = false;
-            nearByEnemies.Remove(other.gameObject);
+            //nearByEnemies.Remove(other.gameObject);
             //Debug.Log(nearByEnemies[lockedEnemy]);
-
+            //if(nearByEnemies.Count < 1)
+            //{
+            //    nearByEnemies.Remove[lockedEnemy];
+            //}
+            //else 
+                nearByEnemies.Clear();
 
         }
 
@@ -246,6 +251,13 @@ public class TargetController : MonoBehaviour
         //}
 
     }
+
+
+    // if player is within .50x- .somethingy
+    // if return of distance is within range
+            // target enemy;
+    // else
+        // no target happens;
 
 
 

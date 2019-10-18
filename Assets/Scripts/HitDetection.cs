@@ -78,15 +78,18 @@ public class HitDetection : MonoBehaviour
         // Debug.Log("tag  " + other.tag);
         if (other.tag == "Enemy")
         {
-            hitDetected = true;
-            Debug.Log("Hit Detected on  " + other);
-            enemyTarget = other.gameObject;
+            //hitDetected = true;
+            //Debug.Log("Hit Detected on  " + other);
+            //enemyTarget = other.gameObject;
             //enemyTarget.GetComponent<EnemyStats>().TakeDamage(10);
-            enemyState = enemyTarget.GetComponent<EnemyState>();
+            //enemyState = enemyTarget.GetComponent<EnemyState>();
 
-            float attackTime = .23f;
+            enemyState = other.gameObject.GetComponent<EnemyState>();
 
-            StartCoroutine(DamageSequence());
+            //float attackTime = .23f;
+            //float attackTime = 0f;
+
+            playerCombat.DealDamage(enemyState);
 
             // Add ragdoll effect / death animation
             //characterAnimator.Death();
@@ -94,21 +97,23 @@ public class HitDetection : MonoBehaviour
             //targetController.target = null;
             //targetController.nearByEnemies.Remove(gameObject);
 
-            IEnumerator DamageSequence()
-            {
-                // - After 0 seconds, prints "Starting 0.0"
-                // - After 2 seconds, prints "WaitAndPrint 2.0"
-                // - After 2 seconds, prints "Done 2.0"
-                //characterAnimator.Death();
+            //StartCoroutine(DamageSequence());
 
-                // Start function WaitAndPrint as a coroutine. And wait until it is completed.
-                // the same as yield WaitAndPrint(2.0);
-                yield return new WaitForSeconds(attackTime * Time.deltaTime);
-                //print("Done " + Time.time);
-                playerCombat.DealDamage(enemyState);
+            //IEnumerator DamageSequence()
+            //{
+            //    // - After 0 seconds, prints "Starting 0.0"
+            //    // - After 2 seconds, prints "WaitAndPrint 2.0"
+            //    // - After 2 seconds, prints "Done 2.0"
+            //    //characterAnimator.Death();
 
-            }
-            
+            //    // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+            //    // the same as yield WaitAndPrint(2.0);
+            //    yield return new WaitForSeconds(attackTime * Time.deltaTime);
+            //    //print("Done " + Time.time);
+            //    playerCombat.DealDamage(enemyState);
+
+            //}
+
 
         }
         else

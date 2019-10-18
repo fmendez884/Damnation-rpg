@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyStats : CharacterStats
 {
@@ -11,7 +12,8 @@ public class EnemyStats : CharacterStats
     //public targetController1 targetController;
     public CharacterAnimator characterAnimator;
     float deathTime = 4f;
-
+    GameObject enemyGameObject;
+    NavMeshAgent agent;
 
 
     private void Start()
@@ -23,6 +25,9 @@ public class EnemyStats : CharacterStats
         //targetController = GameObject.Find("GameManager").GetComponentInChildren<TargetController>();
 
         characterAnimator = GetComponent<CharacterAnimator>();
+        //enemyGameObject = this.gameObject;
+
+        agent = GetComponent<NavMeshAgent>();
 
     }
 
@@ -81,11 +86,11 @@ public class EnemyStats : CharacterStats
 
     public override void Die()
     {
-        base.Die();
+        //base.Die();
         float deathTime = 5f;
 
         targetController.target = null;
-        TargetController.nearByEnemies.Remove(gameObject);
+        TargetController.nearByEnemies.Clear();
         //targetController1.nearByEnemies.Remove(gameObject);
 
 
@@ -103,6 +108,8 @@ public class EnemyStats : CharacterStats
             // - After 2 seconds, prints "WaitAndPrint 2.0"
             // - After 2 seconds, prints "Done 2.0"
             characterAnimator.Death();
+            //gameObject.Disable();
+            agent.speed = 0;
 
             // Start function WaitAndPrint as a coroutine. And wait until it is completed.
             // the same as yield WaitAndPrint(2.0);

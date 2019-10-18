@@ -10,12 +10,22 @@ public class EnemyController : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
     CharacterCombat combat;
+    PlayerState playerState;
+    EnemyStats enemyStats;
+
+    CharacterAnimator characterAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         combat = GetComponent<CharacterCombat>();
+
+        characterAnimator = GetComponent<CharacterAnimator>();
+
+        playerState = GameObject.Find("Player").GetComponent<PlayerState>();
+        enemyStats = GetComponent<EnemyStats>();
     }
 
     // Update is called once per frame
@@ -33,8 +43,10 @@ public class EnemyController : MonoBehaviour
             CharacterStats targetStats = target.GetComponent<CharacterStats>();
             if(targetStats != null)
             {
+                //Debug.Log("Enemy is ready to attack");
                 // Attack the target
-                combat.Attack(targetStats);
+                //combat.Attack(targetStats);
+                AttackTarget();
                 // Face the target
                 FaceTarget();
             }
@@ -53,6 +65,12 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
+
+    void AttackTarget()
+    {
+        characterAnimator.Attack();
+    }
+
 
 }
 

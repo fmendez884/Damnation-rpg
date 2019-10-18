@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerStats : CharacterStats
 {
+    public float deathTime = 5f;
+    CharacterAnimator characterAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        EquipmentManager.instance.onEquipmentChanged += onEquipmentChanged;
+        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        characterAnimator = GetComponent<CharacterAnimator>();
     }
-    void onEquipmentChanged(Equipment newItem, Equipment oldItem)
+    void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
         if (newItem != null)
         {
@@ -24,10 +27,64 @@ public class PlayerStats : CharacterStats
         }
     }
 
-    public override void Die()
+    public override void TakeDamage(int damage)
     {
-        base.Die();
+        damage = Mathf.Clamp(damage, 0, int.MaxValue);
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, int.MaxValue);
+
+        Debug.Log("Enemy Damages " + name + " for " + damage + " damage!");
+        Debug.Log(name + " HP: " + currentHealth);
+
+        if (currentHealth == 0)
+        {
+            Death();
+        }
+
+        else
+        {
+            characterAnimator.Damage();
+
+            damage = Mathf.Clamp(damage, 0, int.MaxValue);
+            currentHealth -= damage;
+
+            
+
+            
+
+        }
+    }
+
+
+    public override void Death()
+    {
+
         // Kill the player
-        PlayerManager.instance.KillPlayer();
+        //targetController.target = null;
+        TargetController.nearByEnemies.Clear();
+        //targetController1.nearByEnemies.Remove(gameObject);
+
+
+        StartCoroutine(DeathSequence());
+
+
+
+        IEnumerator DeathSequence()
+        {
+
+            characterAnimator.Death();
+            //gameObject.Disable();
+            //agent.speed = 0;
+
+            // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+            // the same as yield WaitAndPrint(2.0);
+            yield return new WaitForSeconds(deathTime);
+            //print("Done " + Time.time);
+
+            // drop loot
+            //gameObject.SetActive(false);
+
+            PlayerManager.instance.KillPlayer();
+        }
     }
 }

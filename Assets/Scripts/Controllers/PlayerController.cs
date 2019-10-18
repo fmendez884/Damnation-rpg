@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    // public Rigidbody theRB;
+   
     public float moveSpeed;
     public float jumpForce = 20;
     public float gravityScale;
@@ -23,87 +23,43 @@ public class PlayerController : MonoBehaviour
     public Transform target;
 
     public PlayerCombat combat;
-    public HitDetection hitDetection;
-    public Collider hitCollider;
+    readonly KeyCode AttackKey = KeyCode.X;
+    readonly KeyCode MagicKey = KeyCode.C;
+    readonly KeyCode ResetKey = KeyCode.R;
 
-    KeyCode AttackKey = KeyCode.X;
-    KeyCode MagicKey = KeyCode.C;
-    KeyCode ResetKey = KeyCode.R;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        // Debug.Log("SUP");
-        // theRB = GetComponent<Rigidbody>();
+        
         controller = GetComponent<CharacterController>();
         agent = GetComponent<NavMeshAgent>();
         cam = GameObject.Find("Main Camera");
         animator = GetComponentInChildren<Animator>();
         characterAnimator = GetComponent<CharacterAnimator>();
         combat = GetComponent<PlayerCombat>();
-        //hitDetection = GetComponentInChildren<HitDetection>();
-        //hitCollider = hitDetection.GetComponent<Collider>();
-        //hitDetection.enabled = false;
-        //hitCollider.enabled = false;
-        //Debug.Log("Hit Detection:  " + hitDetection.enabled);
-        //Debug.Log("Mesh Collider:  " + hitDetection.GetComponent<Collider>().enabled);
+       
     }
 
-    // Update is called once per frame
-    // Late Update once NavMesh is fixed for smoother movement
+   
     void Update()
     {
-        // cam.transform.position = target.transform.position;
-        // Debug.Log(moveSpeed);
-        // theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
-
-        // if (Input.GetButtonDown("Jump"))
-        // {
-        //     theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
-        //     Debug.Log();
-        // }
-
-        // moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
+        
         float yStore = moveDirection.y;
         moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
         moveDirection = moveDirection.normalized * moveSpeed;
         moveDirection.y = yStore;
         
 
-        // if (Input.GetAxis("Horizontal") == 0f || Input.GetAxis("Vertical") == 0f)
-        // {
-        //     if (Input.GetButtonDown("Jump") && controller.isGrounded)
-        //     {
-        //         Debug.Log("grounded");
-        //         Debug.Log("jump");
-        //         // agent.isStopped = true;
-        //         // agent.ResetPath();
-        //         moveDirection.y = jumpForce;
-        //     }
-        //     controller.Move(moveDirection * Time.deltaTime);
-        // }
+        
         
         moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
 
-        // if (agent.enabled = true)
-        // {
-        //     if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f)
-        //     {
-        //         ResetAgent();
-
-        //         transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-        //         // Debug.Log(cam.transform.rotation);
-        //         Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-        //         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-
-        //         controller.Move(moveDirection * Time.deltaTime);
-        //     }
-        // }
+        
 
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            //Debug.Log("grounded");
-            //Debug.Log("jump");
+         
             // agent.isStopped = true;
             // agent.ResetPath();
             moveDirection.y = jumpForce;
@@ -139,16 +95,16 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime);
 
-        // Move the player in different directions based on the camera directionf
+        // Move the player in different directions based on the camera direction
 
-        //if (Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.RightCommand))
+        
 
         if (Input.GetKeyDown(AttackKey))
         {
             ResetAgent();
 
             PlayerAttack();
-            //animator.SetTrigger("Attack");
+    
         }
 
         if (Input.GetKeyDown(MagicKey))
@@ -156,7 +112,6 @@ public class PlayerController : MonoBehaviour
             ResetAgent();
 
             PlayerCastMagic();
-            //animator.SetTrigger("Magic");
         }
 
         if (Input.GetKeyDown(ResetKey))
@@ -170,12 +125,6 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         
 
-        // float distance = Vector3.Distance(target.position, transform.position);
-        
-        // if (distance <= targetSelectRadius)
-        // {
-        //     FaceTarget();
-        // }
 
     }
 
@@ -204,48 +153,41 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, targetSelectRadius);
     }
 
-    private void OnTriggerEnter(Collider other) 
-    {
-        switch (other.tag)
-        {
-            case ("Enemy"):
-            {
-                //Debug.Log("enemy");
-                //Debug.Log(other);
+    //private void OnTriggerEnter(Collider other) 
+    //{
+    //    switch (other.tag)
+    //    {
+    //        case ("Enemy"):
+    //        {
+    //            //Debug.Log("enemy");
+    //            //Debug.Log(other);
 
-                //target = other.transform;
-                    //FaceTarget();
-            }
-            break;
-        }
-    }
+    //            //target = other.transform;
+    //                //FaceTarget();
+    //        }
+    //        break;
+    //    }
+    //}
 
-    public void TeleportPlayer(Collider other) 
-    {
+    //public void TeleportPlayer(Collider other) 
+    //{
 
-    }
+    //}
 
     public void PlayerAttack()
     {
-        //Debug.Log("Player Attacks");
-        //transform.GetComponentInChildren<HitDetection>().enabled = true;
-        //animator.SetTrigger("attack");
-        //characterAnimator.Attack();
+        
         combat.actionState = PlayerCombat.Action.ATTACK;
 
 
-        //transform.GetComponentInChildren<HitDetection>().enabled = false;
     }
 
     public void PlayerCastMagic()
     {
-        //Debug.Log("Player Attacks");
-        //transform.GetComponentInChildren<HitDetection>().enabled = true;
-        //animator.SetTrigger("attack");
-        //characterAnimator.Attack();
+        
         combat.actionState = PlayerCombat.Action.MAGIC;
 
 
-        //transform.GetComponentInChildren<HitDetection>().enabled = false;
+        
     }
 }

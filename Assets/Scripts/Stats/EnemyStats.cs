@@ -6,19 +6,24 @@ using UnityEngine.AI;
 public class EnemyStats : CharacterStats
 {
 
-    string enemyName;
+    
     public TargetController targetController;
 
     //public targetController1 targetController;
     public CharacterAnimator characterAnimator;
-    float deathTime = 4f;
-    GameObject enemyGameObject;
+
+    public float deathTime = 5f;
+
     NavMeshAgent agent;
 
+    EnemyStats enemyStats;
+
+    //PlayerState playerState;
+    //PlayerStats playerStats;
 
     private void Start()
     {
-        enemyName = name;
+        
         targetController = GameObject.Find("TargetSystem").GetComponentInChildren<TargetController>();
 
         //targetController = GameObject.Find("GameManager").GetComponentInChildren<targetController1>();
@@ -26,21 +31,24 @@ public class EnemyStats : CharacterStats
 
         characterAnimator = GetComponent<CharacterAnimator>();
         //enemyGameObject = this.gameObject;
+        enemyStats = GetComponent<EnemyStats>();
 
         agent = GetComponent<NavMeshAgent>();
+        //playerState = GameObject.Find("Player").GetComponent<PlayerState>();
+        //playerStats = playerState.playerStats;
 
     }
 
     public override void TakeDamage(int damage)
     {
-        base.TakeDamage(damage);
+        //base.TakeDamage(damage);
 
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
 
         if (currentHealth <= 0 || currentHealth == 0)
         {
-            Die();
+            Death();
         }
 
         else
@@ -56,38 +64,24 @@ public class EnemyStats : CharacterStats
 
     }
 
-    //public override void Die()  
-    //{
-    //    base.Die();
+    public void DealDamage(PlayerState playerState)
+    {
+       
 
-    //    // Add ragdoll effect / death animation
-    //    //characterAnimator.Death();
-    //    //targetController.removeTarget();;
-    //    targetController.target = null;
-    //    targetController.nearByEnemies.Remove(gameObject);
+            float calcDamage = (float)enemyStats.damage.GetValue() * (100f / (100f + (float)playerState.playerStats.armor.GetValue()));
+            playerState.playerStats.TakeDamage((int)calcDamage);
 
-    //    StartCoroutine(Death(deathTime));
 
-    //    IEnumerator Death(float deathTime)
-    //    {
-    //        //dying = true;
-    //        yield return new WaitForSeconds(deathTime);
-    //        //dieing animation here
-    //        characterAnimator.Death();
-    //        //dying = !dying;
-    //    }
-    //    gameObject.SetActive(false);
-        
-    //    //loot
+        //Debug.Log("Enemy Attacks");        
+    }
 
-    //}
 
     
 
-    public override void Die()
+    public override void Death()
     {
-        //base.Die();
-        float deathTime = 5f;
+        base.Death();
+        //float deathTime = 5f;
 
         targetController.target = null;
         TargetController.nearByEnemies.Clear();
@@ -96,17 +90,11 @@ public class EnemyStats : CharacterStats
 
         StartCoroutine(DeathSequence());
 
-        // Add ragdoll effect / death animation
-        //characterAnimator.Death();
-        //targetController.removeTarget();;
-        //targetController.target = null;
-        //targetController.nearByEnemies.Remove(gameObject);
+        
 
         IEnumerator DeathSequence()
         {
-            // - After 0 seconds, prints "Starting 0.0"
-            // - After 2 seconds, prints "WaitAndPrint 2.0"
-            // - After 2 seconds, prints "Done 2.0"
+            
             characterAnimator.Death();
             //gameObject.Disable();
             agent.speed = 0;
@@ -115,115 +103,14 @@ public class EnemyStats : CharacterStats
             // the same as yield WaitAndPrint(2.0);
             yield return new WaitForSeconds(deathTime);
             //print("Done " + Time.time);
+
+            // drop loot
             gameObject.SetActive(false);
             
         }
 
-        //// suspend execution for waitTime seconds
-        //IEnumerator DeathAnimation(float waitTime)
-        //{
-        //    yield return new WaitForSeconds(waitTime);
-        //    //print("WaitAndPrint " + Time.time);
-        //    characterAnimator.Death();
-        //}
-
-        //IEnumerator PerformPlayerMotion()
-        //{
-        //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Move);
-        //    PlayerControl.RaiseOnChangeCameraMode(CameraScenematic.CameraMode.PlayerMovement);
-        //    Yield return StartCoroutine(player.PerformMovement());
-        //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Idle);
-        //    Player.StopNow();
-        //    Yield return new WaitForSeconds(1.0f);
-        //}
 
     }
-
-    //public void Death()
-    //{
-    //    targetController.target = null;
-    //    targetController.nearByEnemies.Remove(gameObject);
-    //}
-
-
-    // // time to wait
-    //bool dying;
-
-    //void Dead()
-    //{
-    //    if (!dying)
-    //        StartCoroutine(Death(deathTime));  // StartCoroutine(dying(4f));
-    //}
-    //IEnumerator Death(float deathTime)
-    //{
-    //    //dying = true;
-    //    yield return new WaitForSeconds(deathTime);
-    //    //dieing animation here
-    //    characterAnimator.Death();
-    //    //dying = !dying;
-    //}
-
-
-    //IEnumerator PerformPlayerMotion()
-    //{
-    //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Move);
-    //    PlayerControl.RaiseOnChangeCameraMode(CameraScenematic.CameraMode.PlayerMovement);
-    //    Yield return StartCoroutine(player.PerformMovement());
-    //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Idle);
-    //    Player.StopNow();
-    //    Yield return new WaitForSeconds(1.0f);
-    //}
-
-
-    //public override void Die()
-    //{
-    //    base.Die();
-    //    float deathTime = 5f;
-    //    StartCoroutine(DeathSequence());
-
-    //    // Add ragdoll effect / death animation
-    //    //characterAnimator.Death();
-    //    //targetController.removeTarget();;
-    //    //targetController.target = null;
-    //    //targetController.nearByEnemies.Remove(gameObject);
-
-    //    IEnumerator DeathSequence()
-    //    {
-    //        // - After 0 seconds, prints "Starting 0.0"
-    //        // - After 2 seconds, prints "WaitAndPrint 2.0"
-    //        // - After 2 seconds, prints "Done 2.0"
-    //        //characterAnimator.Death();
-
-    //        // Start function WaitAndPrint as a coroutine. And wait until it is completed.
-    //        // the same as yield WaitAndPrint(2.0);
-    //        yield return StartCoroutine(DeathAnimation(deathTime));
-    //        //print("Done " + Time.time);
-    //        gameObject.SetActive(false);
-
-    //    }
-
-    //    // suspend execution for waitTime seconds
-    //    IEnumerator DeathAnimation(float waitTime)
-    //    {
-    //        yield return new WaitForSeconds(waitTime);
-    //        //print("WaitAndPrint " + Time.time);
-    //        characterAnimator.Death();
-    //    }
-
-    //    //IEnumerator PerformPlayerMotion()
-    //    //{
-    //    //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Move);
-    //    //    PlayerControl.RaiseOnChangeCameraMode(CameraScenematic.CameraMode.PlayerMovement);
-    //    //    Yield return StartCoroutine(player.PerformMovement());
-    //    //    player.ChangeAnimatorState(PlayerAnimator.AnimatorState.Idle);
-    //    //    Player.StopNow();
-    //    //    Yield return new WaitForSeconds(1.0f);
-    //    //}
-
-    //}
-
-
-
 
 
 

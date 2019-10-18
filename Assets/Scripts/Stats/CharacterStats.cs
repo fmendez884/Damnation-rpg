@@ -39,7 +39,7 @@ public class CharacterStats : MonoBehaviour
         //}
     }
 
-    public virtual void Die () 
+    public virtual void Death() 
     {
         // Die in some way 
         //This method is meant to be overriddeen 

@@ -41,7 +41,7 @@ public class HeroStateMachine : MonoBehaviour
     void Start()
     {
         //find spacer object in gamescene, make connection
-        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.FindChild("HeroPanel").transform.FindChild("HeroPanelSpacer");
+        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.Find("HeroPanel").transform.Find("HeroPanelSpacer");
         //create panel, fill in info of corresponding hero
         CreateHeroPanel();
 

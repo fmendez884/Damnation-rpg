@@ -2,25 +2,26 @@
 
 public class CharacterStats : MonoBehaviour
 {
+    public string name;
     public int maxHealth = 100;
-    public int currentHealth { get; private set; }
+    public int currentHealth;
     public Stat damage;
     public Stat armor;
 
-    void Awake() 
+    void Awake()
     {
         currentHealth = maxHealth;
     }
 
-    void Update () 
+    void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             //TakeDamage(10);
         }
     }
 
-    public virtual void TakeDamage ( int damage )
+    public virtual void TakeDamage(int damage)
     {
         ////calculate damge 
         //damage -= armor.GetValue();
@@ -30,16 +31,18 @@ public class CharacterStats : MonoBehaviour
         //Debug.Log(transform.name + "takes" + damage + " damage.");
         //Debug.Log(currentHealth);
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+
+
+        //if (currentHealth >= 0 || currentHealth == 0)
+        //{
+        //    Die();
+        //}
     }
 
     public virtual void Die () 
     {
         // Die in some way 
         //This method is meant to be overriddeen 
-        Debug.Log(transform.name + " has died.");
+        Debug.Log(name + " has died.");
     }
 }

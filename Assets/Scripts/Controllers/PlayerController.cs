@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     public HitDetection hitDetection;
     public Collider hitCollider;
 
+    KeyCode AttackKey = KeyCode.X;
+    KeyCode MagicKey = KeyCode.C;
+    KeyCode ResetKey = KeyCode.R;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -138,14 +142,30 @@ public class PlayerController : MonoBehaviour
         // Move the player in different directions based on the camera directionf
 
         //if (Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.RightCommand))
-        if (Input.GetKeyDown(KeyCode.X))
+
+        if (Input.GetKeyDown(AttackKey))
         {
             ResetAgent();
 
             PlayerAttack();
-            //animator.SetTrigger("attack");
+            //animator.SetTrigger("Attack");
         }
-        
+
+        if (Input.GetKeyDown(MagicKey))
+        {
+            ResetAgent();
+
+            PlayerCastMagic();
+            //animator.SetTrigger("Magic");
+        }
+
+        if (Input.GetKeyDown(ResetKey))
+        {
+            ResetAgent();
+
+            PlayerManager.instance.KillPlayer();
+        }
+
         animator.SetBool("isGrounded", controller.isGrounded);
         animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         
@@ -212,6 +232,18 @@ public class PlayerController : MonoBehaviour
         //animator.SetTrigger("attack");
         //characterAnimator.Attack();
         combat.actionState = PlayerCombat.Action.ATTACK;
+
+
+        //transform.GetComponentInChildren<HitDetection>().enabled = false;
+    }
+
+    public void PlayerCastMagic()
+    {
+        //Debug.Log("Player Attacks");
+        //transform.GetComponentInChildren<HitDetection>().enabled = true;
+        //animator.SetTrigger("attack");
+        //characterAnimator.Attack();
+        combat.actionState = PlayerCombat.Action.MAGIC;
 
 
         //transform.GetComponentInChildren<HitDetection>().enabled = false;

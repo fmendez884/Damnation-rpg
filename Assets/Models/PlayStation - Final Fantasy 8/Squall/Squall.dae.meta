@@ -30,6 +30,30 @@ ModelImporter:
   - first:
       74: 8904657866708428396
     second: squall@weaponRun
+  - first:
+      74: -8233426235674577717
+    second: squall@damage
+  - first:
+      74: -7279466925569173562
+    second: squall@damage2
+  - first:
+      74: 4648081414045765817
+    second: squall@damage3
+  - first:
+      74: -811562942422163407
+    second: squall@death
+  - first:
+      74: -6654357367431081308
+    second: squall@getUp
+  - first:
+      74: -407301378168710324
+    second: squall@block
+  - first:
+      74: 6792680114713105140
+    second: squall@win
+  - first:
+      74: -2316548289119316096
+    second: squall@dashBack
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -362,6 +386,654 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@damage
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 59
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@damage2
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 78
+      lastFrame: 101
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@damage3
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 102
+      lastFrame: 121
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@death
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 167
+      lastFrame: 196
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@getUp
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 197
+      lastFrame: 247
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@block
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 369
+      lastFrame: 388
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@win
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 390
+      lastFrame: 449
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone0
+        weight: 1
+      - path: bone0/bone1
+        weight: 1
+      - path: bone0/bone1/bone3
+        weight: 1
+      - path: bone0/bone1/bone3/bone8
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17
+        weight: 1
+      - path: bone0/bone1/bone3/bone8/bone13/bone17/bone21
+        weight: 1
+      - path: bone0/bone1/bone4
+        weight: 1
+      - path: bone0/bone1/bone4/bone9
+        weight: 1
+      - path: bone0/bone1/bone5
+        weight: 1
+      - path: bone0/bone1/bone5/bone10
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18
+        weight: 1
+      - path: bone0/bone1/bone5/bone10/bone14/bone18/bone22
+        weight: 1
+      - path: bone0/bone2
+        weight: 1
+      - path: bone0/bone2/bone6
+        weight: 1
+      - path: bone0/bone2/bone6/bone11
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15
+        weight: 1
+      - path: bone0/bone2/bone6/bone11/bone15/bone19
+        weight: 1
+      - path: bone0/bone2/bone7
+        weight: 1
+      - path: bone0/bone2/bone7/bone12
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16
+        weight: 1
+      - path: bone0/bone2/bone7/bone12/bone16/bone20
+        weight: 1
+      - path: mesh0000
+        weight: 1
+      - path: mesh0001
+        weight: 1
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 2e7f52da67e5240019ff29c49f18c592, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: squall@dashBack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 487
+      lastFrame: 497
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

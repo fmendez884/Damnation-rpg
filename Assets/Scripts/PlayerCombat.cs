@@ -40,8 +40,8 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         characterAnimator = GetComponent<CharacterAnimator>();
 
-        hitDetection = GetComponentInChildren<HitDetection>();
-        hitCollider = hitDetection.GetComponent<Collider>();
+        //hitDetection = GetComponentInChildren<HitDetection>();
+        //hitCollider = hitDetection.GetComponent<Collider>();
 
         actionState = Action.IDLE;
         enemyTarget = null;
@@ -54,8 +54,8 @@ public class PlayerCombat : MonoBehaviour
         switch (actionState)
         {
             case (Action.IDLE):
-                hitDetection.enabled = false;
-                hitCollider.enabled = false;
+                //hitDetection.enabled = false;
+                //hitCollider.enabled = false;
                 //Debug.Log("Hit Detection:  " + hitDetection.enabled);
                 //Debug.Log("Mesh Collider:  " + hitDetection.GetComponent<Collider>().enabled);
                 break;
@@ -138,8 +138,8 @@ public class PlayerCombat : MonoBehaviour
     public void PlayerAttack()
     {
    
-        hitDetection.enabled = true;
-        hitCollider.enabled = true;
+        //hitDetection.enabled = true;
+        //hitCollider.enabled = true;
         
         characterAnimator.Attack();
         

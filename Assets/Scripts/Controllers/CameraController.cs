@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public Transform target;
     public Transform enemyTarget;
     public Vector3 offset;
+    public Vector3 enemyOffset;
     public float zoomSpeed = 4f;
     public float minZoom = 5f;
     public float maxZoom = 15f;
@@ -57,7 +58,8 @@ public class CameraController : MonoBehaviour
 
         
     }
-    void LateUpdate() {
+    void LateUpdate()
+    {
         {
             if (enemyTarget == null)
             {
@@ -68,12 +70,22 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                transform.position = target.position - offset * currentZoom;
+                enemyOffset = CalculateEnemyOffset();
+                transform.position = target.position - enemyOffset * currentZoom;
                 transform.LookAt(enemyTarget.transform.position + Vector3.up * pitch);
 
                 transform.RotateAround(target.position, Vector3.up, currentYaw);
             }
         }
+    }
+
+
+    public Vector3 CalculateEnemyOffset()
+    {
+        Vector3 newOffSet = offset;
+        newOffSet.x = enemyTarget.localScale.y;
+        //target.transform.position.y + targetCollider.center.y + targetCollider.height + target.transform.localScale.y + 1.2f;
+        return newOffSet;
     }
 
 }

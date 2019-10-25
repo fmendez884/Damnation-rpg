@@ -10,6 +10,8 @@ public class PlayerCombat : MonoBehaviour
 
     //public event System.Action onAttack;
 
+    public CharacterController characterController;
+
     public Animator animator;
     public CharacterAnimator characterAnimator;
     public HitDetection hitDetection;
@@ -40,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         characterAnimator = GetComponent<CharacterAnimator>();
 
-      
+        characterController = GetComponent<CharacterController>();
 
         actionState = Action.IDLE;
         enemyTarget = null;
@@ -53,12 +55,14 @@ public class PlayerCombat : MonoBehaviour
         switch (actionState)
         {
             case (Action.IDLE):
-              
+                
                 break;
             case (Action.ATTACK):
                 //Debug.Log("Attack State");
+
                 PlayerAttack();
                 actionState = Action.IDLE;
+                //characterController.enabled = true;
                 break;
             case (Action.MAGIC):
                 PlayerCastMagic();
@@ -72,13 +76,13 @@ public class PlayerCombat : MonoBehaviour
 
     public void PlayerAttack()
     {
-        
+        characterController.enabled = false;
         characterAnimator.Attack();
         
       
         enemyTarget = null;
 
-
+        characterController.enabled = true;
     }
 
     public void PlayerCastMagic()

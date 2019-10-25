@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
 
         characterAnimator = GetComponent<CharacterAnimator>();
 
-        playerState = GameObject.Find("Player").GetComponent<PlayerState>();
+        playerState = GameObject.FindWithTag("Player").GetComponent<PlayerState>();
         enemyStats = GetComponent<EnemyStats>();
     }
 

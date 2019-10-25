@@ -45,8 +45,8 @@ public class PlayerStats : CharacterStats
         {
             characterAnimator.Damage();
 
-            damage = Mathf.Clamp(damage, 0, int.MaxValue);
-            currentHealth -= damage;
+            //damage = Mathf.Clamp(damage, 0, int.MaxValue);
+            //currentHealth -= damage;
 
             
 

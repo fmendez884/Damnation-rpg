@@ -21,7 +21,9 @@ public class CameraController : MonoBehaviour
     void Start() 
     {
         currentZoom = maxZoom - minZoom;
+        target = GameObject.FindWithTag("Player").transform;
     }
+
     void Update ()
     {
         currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;

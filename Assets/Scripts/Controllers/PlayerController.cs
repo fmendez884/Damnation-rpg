@@ -27,6 +27,21 @@ public class PlayerController : MonoBehaviour
     readonly KeyCode MagicKey = KeyCode.C;
     readonly KeyCode ResetKey = KeyCode.R;
 
+    public bool action;
+
+
+    public enum Controller
+
+    {
+        IDLE,
+        AIR,
+        RUNNING,
+        ACTION,
+        DAMAGE,
+        DEAD
+    }
+
+    public Controller controllerState;
 
     
     void Start()
@@ -38,7 +53,9 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         characterAnimator = GetComponent<CharacterAnimator>();
         combat = GetComponent<PlayerCombat>();
-       
+        action = false;
+
+        controllerState = Controller.IDLE;
     }
 
    
@@ -49,13 +66,56 @@ public class PlayerController : MonoBehaviour
         moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
         moveDirection = moveDirection.normalized * moveSpeed;
         moveDirection.y = yStore;
-        
 
-        
-        
-        moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
 
-        
+        //switch (controllerState)
+        //{
+        //    case Controller.IDLE:
+        //        //EnablePlayerMovement();
+        //        //controller.Move(moveDirection * Time.deltaTime);
+        //        break;
+        //    case Controller.RUNNING:
+
+        //        break;
+        //    case Controller.ACTION:
+        //        StartCoroutine(AttackSequence());
+
+        //        //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+
+        //        IEnumerator AttackSequence()
+        //        {
+        //            float attackTime = .7f;
+
+        //            //characterAnimator.Death();
+        //            //gameObject.Disable();
+        //            //agent.speed = 0;
+
+        //            // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+        //            // the same as yield WaitAndPrint(2.0);
+        //            yield return new WaitForSeconds(attackTime);
+        //            //print("Done " + Time.time);
+
+        //            // drop loot
+        //            //gameObject.SetActive(false);
+
+        //            controllerState = Controller.IDLE;
+
+                    
+
+        //        }
+        //        break;
+        //    case Controller.AIR:
+
+        //        break;
+        //    case Controller.DEAD:
+        //        //agent.speed = 0;
+        //        //enemyStats.Die();
+        //        break;
+        //}
+
+
+
+
 
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
@@ -64,9 +124,9 @@ public class PlayerController : MonoBehaviour
             // agent.ResetPath();
             moveDirection.y = jumpForce;
         }
-        
-        
-        
+
+
+
 
         if (target != null)
         {
@@ -95,23 +155,64 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime);
 
+        //if (!action)
+        //{
+
+        //}
+
         // Move the player in different directions based on the camera direction
 
-        
 
-        if (Input.GetKeyDown(AttackKey))
-        {
-            ResetAgent();
 
-            PlayerAttack();
-    
-        }
+        //if (Input.GetKeyDown(AttackKey))
+        //{
+        //    //controllerState = Controller.ACTION;
+        //    ResetAgent();
+
+        //    //action = true;
+        //    controller.Move(new Vector3(0, moveDirection.y * Time.deltaTime, 0));
+
+        //    StartCoroutine(AttackSequence());
+
+        //    //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+
+        //    IEnumerator AttackSequence()
+        //    {
+        //        float attackTime = .7f;
+
+        //        //characterAnimator.Death();
+        //        //gameObject.Disable();
+        //        //agent.speed = 0;
+
+        //        // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+        //        // the same as yield WaitAndPrint(2.0);
+        //        yield return new WaitForSeconds(attackTime);
+        //        //print("Done " + Time.time);
+
+        //        // drop loot
+        //        //gameObject.SetActive(false);
+
+        //        //controllerState = Controller.IDLE;
+
+
+
+        //    }
+
+        //    PlayerAttack();
+
+        //    //action = false;
+
+        //}
 
         if (Input.GetKeyDown(MagicKey))
         {
             ResetAgent();
 
+            //action = true;
+
             PlayerCastMagic();
+
+            //action = false;
         }
 
         if (Input.GetKeyDown(ResetKey))
@@ -121,11 +222,56 @@ public class PlayerController : MonoBehaviour
             PlayerManager.instance.KillPlayer();
         }
 
+        moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+
         animator.SetBool("isGrounded", controller.isGrounded);
         animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         
 
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(AttackKey))
+        {
+            //controllerState = Controller.ACTION;
+            ResetAgent();
+
+            //action = true;
+            controller.Move(new Vector3(0, moveDirection.y * Time.deltaTime, 0));
+
+            StartCoroutine(AttackSequence());
+
+            //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+
+            IEnumerator AttackSequence()
+            {
+                float attackTime = .7f;
+
+                //characterAnimator.Death();
+                //gameObject.Disable();
+                //agent.speed = 0;
+
+                // Start function WaitAndPrint as a coroutine. And wait until it is completed.
+                // the same as yield WaitAndPrint(2.0);
+                yield return new WaitForSeconds(attackTime);
+                //print("Done " + Time.time);
+
+                // drop loot
+                //gameObject.SetActive(false);
+
+                //controllerState = Controller.IDLE;
+
+
+
+            }
+
+            PlayerAttack();
+
+            //action = false;
+
+        }
     }
 
     public void ResetAgent() 
@@ -190,4 +336,36 @@ public class PlayerController : MonoBehaviour
 
         
     }
+
+    public void EnablePlayerMovement()
+    {
+        if (target != null)
+        {
+            //Debug.Log(target);
+            //transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+            //// Debug.Log(cam.transform.rotation);
+            //Quaternion newRotation = Quaternion.LookRotation(new Vector3(target.transform.position.x, 0f, target.transform.position.z));
+            //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+
+            transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+            // Debug.Log(cam.transform.rotation);
+            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+            //FaceTarget();
+
+        }
+        
+        else if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f)
+        {
+
+            transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+            // Debug.Log(cam.transform.rotation);
+            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+
+        }
+
+        moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+    }
+
 }

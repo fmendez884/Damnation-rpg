@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
-    public GameObject enemyTarget;
+    //public GameObject enemyTarget;
+   
+    public EnemyState enemyTarget;
     public EnemyState enemyState;
 
+    public PlayerState playerState;
     public PlayerCombat playerCombat;
 
     
    
     void Start()
     {
-        playerCombat = GameObject.Find("Player").GetComponent<PlayerCombat>();
+        playerCombat = GetComponentInParent<PlayerCombat>();
+        playerState = playerCombat.GetComponentInParent<PlayerState>();
+        //if (transform.root.gameObject.tag == "Enemy")
+        //{
+        //    enemyState = GetComponentInParent<EnemyState>();
+        //}
     }
 
   
@@ -34,19 +42,23 @@ public class HitDetection : MonoBehaviour
         {
             
 
-            enemyState = other.gameObject.GetComponent<EnemyState>();
+            enemyTarget = other.gameObject.GetComponent<EnemyState>();
 
             //float attackTime = .23f;
             //float attackTime = 0f;
 
-            playerCombat.DealDamage(enemyState);
+            playerCombat.DealDamage(enemyTarget);
 
           
 
 
         }
-        else
-            enemyTarget = null;
+        //else if (other.tag == "Player")
+        //{
+        //    enemyState.enemyStats.DealDamage(playerState);
+        //}
+        //else
+            //enemyTarget = null;
     }
     
 }

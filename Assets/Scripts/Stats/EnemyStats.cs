@@ -26,6 +26,8 @@ public class EnemyStats : CharacterStats
         
         targetController = GameObject.Find("TargetSystem").GetComponentInChildren<TargetController>();
 
+        
+
         //targetController = GameObject.Find("GameManager").GetComponentInChildren<targetController1>();
         //targetController = GameObject.Find("GameManager").GetComponentInChildren<TargetController>();
 
@@ -45,6 +47,10 @@ public class EnemyStats : CharacterStats
 
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, int.MaxValue);
+
+        Debug.Log("Player Damages " + name + " for " + damage + " damage!");
+        Debug.Log(name + " HP: " + currentHealth);
 
         if (currentHealth <= 0 || currentHealth == 0)
         {
@@ -57,8 +63,8 @@ public class EnemyStats : CharacterStats
 
             //damage = Mathf.Clamp(damage, 0, int.MaxValue);
             //currentHealth -= damage;
-            Debug.Log("Player Damages " + name + " for " + damage + " damage!");
-            Debug.Log(name + " HP: " + currentHealth);
+            //Debug.Log("Player Damages " + name + " for " + damage + " damage!");
+            //Debug.Log(name + " HP: " + currentHealth);
 
         }
 

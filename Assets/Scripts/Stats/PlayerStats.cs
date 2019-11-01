@@ -1,17 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats
 {
     public float deathTime = 5f;
     CharacterAnimator characterAnimator;
+    public GameObject Player;
+
+    public GameObject PlayerHUDPanel;
+
+    public Text HUDHealth;
+
+    public PlayerController playerController;
+
+    //public GameObject PlayerPanel;
+
+
     // Start is called before the first frame update
     void Start()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
         characterAnimator = GetComponent<CharacterAnimator>();
+        //Player = GameObject.FindWithTag("Player");
+        PlayerHUDPanel = Instantiate(PlayerHUDPanel) as GameObject;
+
+        playerController = GetComponent<PlayerController>();
+
+        //HUDHealth = GetComponent<Text>();
     }
+
+    //private void Update()
+    //{
+    //    HUDHealth.text = "HP: " + currentHealth + "/" + maxHealth;
+    //    //HUDMana.text = "MP: " + currentMana + "/" + maxMana;    
+    //}
+
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
         if (newItem != null)
@@ -71,6 +96,7 @@ public class PlayerStats : CharacterStats
 
         IEnumerator DeathSequence()
         {
+            playerController.controllerState = PlayerController.Controller.DEAD;
 
             characterAnimator.Death();
             //gameObject.Disable();

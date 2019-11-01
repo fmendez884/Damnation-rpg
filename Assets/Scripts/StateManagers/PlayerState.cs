@@ -8,6 +8,7 @@ public class PlayerState : MonoBehaviour
     public PlayerController playerController;
     public CharacterCombat characterCombat;
     public CharacterAnimator characterAnimator;
+    public GameObject PlayerPanel;
  
     public enum State
     {
@@ -63,4 +64,22 @@ public class PlayerState : MonoBehaviour
                 break;
         }
     }
+
+    //void CreatePlayerPanel()
+    //{
+    //    PlayerPanel = Instantiate(HeroPanel) as GameObject;
+    //    stats = PlayerPanel.GetComponent<HeroPanelStats>();
+    //    stats.HeroName.text = playerStats.name ;
+    //    stats.HeroHP.text = "HP: " + playerStats.currentHealth + "/" + playerStats.maxHealth;
+    //    //stats.HeroMP.text = "MP: " + playerStats.currentMana + "/" + playerStats.maxMana;
+    //    //ProgressBar = stats.ProgressBar;
+    //    //HeroPanel.transform.SetParent(HeroPanelSpacer, false);
+    //}
+
+    ////update stats on damage / heal
+    //void UpdateHeroPanel()
+    //{
+    //    stats.HeroHP.text = "HP: " + playerStats.currentHealth + "/" + hero.baseHP;
+    //    //stats.HeroMP.text = "MP: " + playerStats.currentMana + "/" + hero.baseMP;
+    //}
 }

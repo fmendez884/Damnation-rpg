@@ -22,20 +22,23 @@ public class PlayerController : MonoBehaviour
     public float targetSelectRadius = 10f;
     public Transform target;
 
+    public GameObject player;
+    public Vector3 currentPosition, lastPosition;
+
+    public bool grounded;
+
     public PlayerCombat combat;
     readonly KeyCode AttackKey = KeyCode.X;
     readonly KeyCode MagicKey = KeyCode.C;
     readonly KeyCode ResetKey = KeyCode.R;
 
-    public bool action;
+    //public bool action;
 
 
     public enum Controller
 
     {
         IDLE,
-        AIR,
-        RUNNING,
         ACTION,
         DAMAGE,
         DEAD
@@ -53,7 +56,11 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         characterAnimator = GetComponent<CharacterAnimator>();
         combat = GetComponent<PlayerCombat>();
-        action = false;
+
+        player = GameObject.FindWithTag("Player");
+        //currentPosition = player.transform.position;
+
+        //action = false;
 
         controllerState = Controller.IDLE;
     }
@@ -61,6 +68,7 @@ public class PlayerController : MonoBehaviour
    
     void Update()
     {
+
         
         float yStore = moveDirection.y;
         moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
@@ -68,50 +76,33 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = yStore;
 
 
-        //switch (controllerState)
-        //{
-        //    case Controller.IDLE:
-        //        //EnablePlayerMovement();
-        //        //controller.Move(moveDirection * Time.deltaTime);
-        //        break;
-        //    case Controller.RUNNING:
+        switch (controllerState)
+        {
+            case Controller.IDLE:
+                EnablePlayerMovement();
+                
+                break;
+            
+            case Controller.ACTION:
+               
 
-        //        break;
-        //    case Controller.ACTION:
-        //        StartCoroutine(AttackSequence());
-
-        //        //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
-
-        //        IEnumerator AttackSequence()
-        //        {
-        //            float attackTime = .7f;
-
-        //            //characterAnimator.Death();
-        //            //gameObject.Disable();
-        //            //agent.speed = 0;
-
-        //            // Start function WaitAndPrint as a coroutine. And wait until it is completed.
-        //            // the same as yield WaitAndPrint(2.0);
-        //            yield return new WaitForSeconds(attackTime);
-        //            //print("Done " + Time.time);
-
-        //            // drop loot
-        //            //gameObject.SetActive(false);
-
-        //            controllerState = Controller.IDLE;
-
+                if (controller.isGrounded)
+                {
                     
+                }
+                else
+                {
+                    EnablePlayerMovement();
+                 
+                    
+                }
 
-        //        }
-        //        break;
-        //    case Controller.AIR:
-
-        //        break;
-        //    case Controller.DEAD:
-        //        //agent.speed = 0;
-        //        //enemyStats.Die();
-        //        break;
-        //}
+                break;
+            
+            case Controller.DEAD:
+                
+                break;
+        }
 
 
 
@@ -120,89 +111,34 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
          
-            // agent.isStopped = true;
-            // agent.ResetPath();
+            
             moveDirection.y = jumpForce;
         }
 
 
 
 
-        if (target != null)
-        {
-            //Debug.Log(target);
-            //transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-            //// Debug.Log(cam.transform.rotation);
-            //Quaternion newRotation = Quaternion.LookRotation(new Vector3(target.transform.position.x, 0f, target.transform.position.z));
-            //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-
-            transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-            // Debug.Log(cam.transform.rotation);
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-            //FaceTarget();
-
-        }
-        else if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f)
-        {
-
-            transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-            // Debug.Log(cam.transform.rotation);
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-
-        }
-
-        controller.Move(moveDirection * Time.deltaTime);
-
-        //if (!action)
+        //if (target != null)
         //{
+            
+        //    transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+        //    // Debug.Log(cam.transform.rotation);
+        //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+        //    //FaceTarget();
+
+        //}
+        //else if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f)
+        //{
+
+        //    transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+        //    // Debug.Log(cam.transform.rotation);
+        //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
 
         //}
 
-        // Move the player in different directions based on the camera direction
-
-
-
-        //if (Input.GetKeyDown(AttackKey))
-        //{
-        //    //controllerState = Controller.ACTION;
-        //    ResetAgent();
-
-        //    //action = true;
-        //    controller.Move(new Vector3(0, moveDirection.y * Time.deltaTime, 0));
-
-        //    StartCoroutine(AttackSequence());
-
-        //    //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
-
-        //    IEnumerator AttackSequence()
-        //    {
-        //        float attackTime = .7f;
-
-        //        //characterAnimator.Death();
-        //        //gameObject.Disable();
-        //        //agent.speed = 0;
-
-        //        // Start function WaitAndPrint as a coroutine. And wait until it is completed.
-        //        // the same as yield WaitAndPrint(2.0);
-        //        yield return new WaitForSeconds(attackTime);
-        //        //print("Done " + Time.time);
-
-        //        // drop loot
-        //        //gameObject.SetActive(false);
-
-        //        //controllerState = Controller.IDLE;
-
-
-
-        //    }
-
-        //    PlayerAttack();
-
-        //    //action = false;
-
-        //}
+       
 
         if (Input.GetKeyDown(MagicKey))
         {
@@ -235,43 +171,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(AttackKey))
         {
-            //controllerState = Controller.ACTION;
-            ResetAgent();
-
-            //action = true;
-            controller.Move(new Vector3(0, moveDirection.y * Time.deltaTime, 0));
-
-            StartCoroutine(AttackSequence());
-
-            //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
-
-            IEnumerator AttackSequence()
-            {
-                float attackTime = .7f;
-
-                //characterAnimator.Death();
-                //gameObject.Disable();
-                //agent.speed = 0;
-
-                // Start function WaitAndPrint as a coroutine. And wait until it is completed.
-                // the same as yield WaitAndPrint(2.0);
-                yield return new WaitForSeconds(attackTime);
-                //print("Done " + Time.time);
-
-                // drop loot
-                //gameObject.SetActive(false);
-
-                //controllerState = Controller.IDLE;
-
-
-
-            }
-
             PlayerAttack();
-
-            //action = false;
+            controllerState = Controller.ACTION;
+           
 
         }
+
+       
+
     }
 
     public void ResetAgent() 
@@ -299,32 +206,13 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, targetSelectRadius);
     }
 
-    //private void OnTriggerEnter(Collider other) 
-    //{
-    //    switch (other.tag)
-    //    {
-    //        case ("Enemy"):
-    //        {
-    //            //Debug.Log("enemy");
-    //            //Debug.Log(other);
-
-    //            //target = other.transform;
-    //                //FaceTarget();
-    //        }
-    //        break;
-    //    }
-    //}
-
-    //public void TeleportPlayer(Collider other) 
-    //{
-
-    //}
+   
 
     public void PlayerAttack()
     {
         
         combat.actionState = PlayerCombat.Action.ATTACK;
-
+        
 
     }
 
@@ -341,12 +229,7 @@ public class PlayerController : MonoBehaviour
     {
         if (target != null)
         {
-            //Debug.Log(target);
-            //transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-            //// Debug.Log(cam.transform.rotation);
-            //Quaternion newRotation = Quaternion.LookRotation(new Vector3(target.transform.position.x, 0f, target.transform.position.z));
-            //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-
+            
             transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
             // Debug.Log(cam.transform.rotation);
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
@@ -366,6 +249,7 @@ public class PlayerController : MonoBehaviour
         }
 
         moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+        controller.Move(moveDirection * Time.deltaTime);
     }
 
 }

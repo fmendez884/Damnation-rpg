@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class CharacterStats : MonoBehaviour
     public int currentHealth;
     public Stat damage;
     public Stat armor;
+
+
 
     void Awake()
     {

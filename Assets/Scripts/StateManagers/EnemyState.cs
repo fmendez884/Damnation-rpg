@@ -9,7 +9,7 @@ public class EnemyState : MonoBehaviour
     public EnemyController enemyController;
     public CharacterCombat characterCombat;
     public CharacterAnimator characterAnimator;
-    public enemyInView enemyInView;
+    
 
     public enum State
     {
@@ -29,7 +29,7 @@ public class EnemyState : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
         characterCombat = GetComponent<CharacterCombat>();
         characterAnimator = GetComponent<CharacterAnimator>();
-        enemyInView = GetComponent<enemyInView>();
+        
 
     }
 

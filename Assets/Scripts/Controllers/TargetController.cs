@@ -13,6 +13,7 @@ public class TargetController : MonoBehaviour
     public Vector3 objOffset = new Vector3(0, 1, 0);
     public float objOffsetY = 1.2f;
     public float reticleHeight;
+    public Vector3 reticlePosition;
     CapsuleCollider targetCollider;
     public PlayerController playerController;
     //readonly KeyCode targetInputKey = KeyCode.Q;
@@ -42,12 +43,14 @@ public class TargetController : MonoBehaviour
         cam = Camera.main;
         camController = cam.GetComponent<CameraController>();
 
-        image = gameObject.GetComponentInChildren<Image>();
-        //image = GameObject.Find("GameManager").GetComponentInChildren<Image>();
+        //image = gameObject.GetComponentInChildren<Image>();
+        image = GameObject.Find("GameManager").GetComponentInChildren<Image>();
+        //image = GameObject.Find("Reticle").GetComponent<Image>();
+        //image = GameObject.Find("GameManager").GetComponentInChildren<Reticle>();
 
         lockedOn = false;
         lockedEnemy = 0;
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     void Update()
@@ -111,14 +114,17 @@ public class TargetController : MonoBehaviour
                     //SkinnedMeshRenderer targetMesh = target.GetComponent<SkinnedMeshRenderer>();
 
 
-                    CalculateReticleHeight();
+                    //CalculateReticleHeight();
                     //Debug.Log(reticleHeight);
+                    GetReticlePosition();
 
                     //Determine Crosshair Location Based On The Current Target
                     // gameObject.transform.position = cam.WorldToScreenPoint(target.transform.position); 
                     //gameObject.transform.position = cam.WorldToScreenPoint(new Vector3(targetCollider.transform.position.x, reticleHeight, targetCollider.transform.position.z));
 
-                    image.transform.position = cam.WorldToScreenPoint(new Vector3(targetCollider.transform.position.x, reticleHeight, targetCollider.transform.position.z));
+                    //image.transform.position = cam.WorldToScreenPoint(new Vector3(targetCollider.transform.position.x, reticleHeight, targetCollider.transform.position.z));
+
+                    image.transform.position = cam.WorldToScreenPoint(reticlePosition);
 
                     camController.enemyTarget = target.transform;
                     
@@ -152,6 +158,12 @@ public class TargetController : MonoBehaviour
     void CalculateReticleHeight()
     {
         reticleHeight = target.transform.position.y + targetCollider.center.y + targetCollider.height + target.transform.localScale.y + 1.2f;
+    }
+
+    void GetReticlePosition()
+    {
+        //reticleHeight = target.transform.position.y + targetCollider.center.y + targetCollider.height + target.transform.localScale.y + 1.2f;
+        reticlePosition = target.GetComponentInChildren<TargetPoint>().transform.position;
     }
 
     public void FaceTarget(Transform target)

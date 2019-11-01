@@ -1,0 +1,2 @@
+Use caution in opening these models in Blender.
+Some of the textures with transparencies are not handled correctly by Blender upon first importing the models.

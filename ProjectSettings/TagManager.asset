@@ -4,17 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Hero
   - Enemy
-  - DeadHero
-  - DeadEnemy
   - EnterTown
   - LeaveTown
-  - region1
   - teleporter
   - cameraField
   - EncounterZone
   - Fire
+  - Reticle
   layers:
   - Default
   - TransparentFX

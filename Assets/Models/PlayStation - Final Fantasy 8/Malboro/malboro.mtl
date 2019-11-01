@@ -1,0 +1,18 @@
+newmtl ffdtex0
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 1.000000
+map_Kd ffdtex0.png
+
+newmtl ffdtex1
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 1.000000
+map_Kd ffdtex1.png
+
+newmtl ffdtex2
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 1.000000
+map_Kd ffdtex2.png
+

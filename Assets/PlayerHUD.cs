@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHUD : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerHUD : MonoBehaviour
     public Text HUDHealth;
     public Text HUDMana;
 
+    public GameObject ActionPanel;
+    public Transform actionSpacer;
+    public GameObject actionButton;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +23,10 @@ public class PlayerHUD : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         playerStats = Player.GetComponent<PlayerStats>();
 
+        ActionPanel = GameObject.Find("ActionPanel");
+        //ActionPanel.SetActive(true);
+
+        //CreateAttackButtons();
 
         HUDName = GameObject.Find("PlayerName").GetComponent<Text>();
         HUDHealth = GameObject.Find("PlayerHP").GetComponent<Text>();
@@ -40,11 +49,28 @@ public class PlayerHUD : MonoBehaviour
 
 
             HUDHealth.text = "HP: " + playerStats.currentHealth + "/" + playerStats.maxHealth;
-            //HUDMana.text = "MP: " + currentMana + "/" + maxMana;
+            //HUDMana.text = "";
+        //HUDMana.text = "MP: " + currentMana + "/" + maxMana;
+
         if ((float)playerStats.currentHealth / (float)playerStats.maxHealth <= .3f)
         {
             HUDName.color = Color.red;
             HUDHealth.color = Color.red;
         }
+    }
+
+    void CreateAttackButtons()
+    {
+        GameObject AttackButton = Instantiate(actionButton) as GameObject;
+        TextMeshPro AttackButtonText = AttackButton.transform.Find("Text").gameObject.GetComponent<TextMeshPro>();
+        AttackButtonText.text = "Attack";
+        AttackButton.GetComponent<Button>().onClick.AddListener(Input1);
+        AttackButton.transform.SetParent(actionSpacer, false);
+
+    }
+
+    void Input1()
+    {
+
     }
 }

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Brackeys/rpg-tutorial-assets/Scenes/FieldScene.unity
     guid: 374df6cee117f4bfca4cfbbbd25ca6a2
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: ca5e7163840a144d2b378414ddc727f5
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
     guid: 8785bddc3241247efbbf7087083fe860
   m_configObjects: {}

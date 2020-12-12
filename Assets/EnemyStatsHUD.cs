@@ -48,6 +48,7 @@ public class EnemyStatsHUD : MonoBehaviour
 
         HUDHealth.text = "HP: " + enemyStats.currentHealth + "/" + enemyStats.maxHealth;
         //HUDMana.text = "MP: " + currentMana + "/" + maxMana;
+
         if ((float)enemyStats.currentHealth / (float)enemyStats.maxHealth <= .3f)
         {
             HUDName.color = Color.red;

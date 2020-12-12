@@ -22,8 +22,8 @@ public class TargetController : MonoBehaviour
 
 
     // "EnEmY iN vIeW"     *middle finger* 🖕🏽
-    bool addOnlyOnce;//This Boolean Is Used To Only Allow The Enemy To Be Added To The List Once
-    CapsuleCollider collider;
+    //bool addOnlyOnce = true;//This Boolean Is Used To Only Allow The Enemy To Be Added To The List Once
+    //CapsuleCollider collider;
 
 
 
@@ -38,7 +38,7 @@ public class TargetController : MonoBehaviour
 
     void Start()
     {
-        addOnlyOnce = true;
+        //addOnlyOnce = true;
 
         cam = Camera.main;
         camController = cam.GetComponent<CameraController>();
@@ -98,7 +98,7 @@ public class TargetController : MonoBehaviour
                 //Move To Next Enemy In List
                 lockedEnemy++;
                 target = nearByEnemies[lockedEnemy];
-                Debug.Log(nearByEnemies[lockedEnemy].GetComponent<EnemyStats>().name);
+                //Debug.Log(nearByEnemies[lockedEnemy].GetComponent<EnemyStats>().name);
             }
         }
 
@@ -201,7 +201,7 @@ public class TargetController : MonoBehaviour
         // Debug.Log("tag  " + other.tag);
         if (other.tag == "Enemy")
         {
-            Debug.Log(other.gameObject.GetComponent<EnemyStats>().name + " in collider");
+            //Debug.Log(other.gameObject.GetComponent<EnemyStats>().name + " in collider");
 
             Vector3 enemyPosition = cam.WorldToViewportPoint(other.transform.position);
 
@@ -239,7 +239,7 @@ public class TargetController : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
-            Debug.Log(other.gameObject.GetComponent<EnemyStats>().name + " exited collider");
+            //Debug.Log(other.gameObject.GetComponent<EnemyStats>().name + " exited collider");
 
 
             //addOnlyOnce = false;

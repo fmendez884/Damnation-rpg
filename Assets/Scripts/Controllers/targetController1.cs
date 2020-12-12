@@ -21,8 +21,8 @@ public class targetController1 : MonoBehaviour {
 
 
     // "EnEmY iN vIeW"     *middle finger* 🖕🏽
-    bool addOnlyOnce;//This Boolean Is Used To Only Allow The Enemy To Be Added To The List Once
-    CapsuleCollider collider;
+    //bool addOnlyOnce;//This Boolean Is Used To Only Allow The Enemy To Be Added To The List Once
+    //CapsuleCollider collider;
 
 
 
@@ -37,7 +37,7 @@ public class targetController1 : MonoBehaviour {
 
     void Start()
     {
-        addOnlyOnce = true;
+        //addOnlyOnce = true;
 
         cam = Camera.main;
         camController = cam.GetComponent<CameraController>();

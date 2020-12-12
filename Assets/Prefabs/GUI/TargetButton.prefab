@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 8768539198508188177}
   - component: {fileID: 3124643013603136715}
   - component: {fileID: 8263658769929573968}
-  - component: {fileID: 1879025878936221009}
   m_Layer: 5
   m_Name: TargetButton
   m_TagString: Untagged
@@ -203,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879025878936221009}
+      - m_Target: {fileID: 0}
         m_MethodName: SelectEnemy
         m_Mode: 1
         m_Arguments:
@@ -214,7 +213,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1879025878936221009}
+      - m_Target: {fileID: 0}
         m_MethodName: HideSelector
         m_Mode: 1
         m_Arguments:
@@ -244,7 +243,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1879025878936221009}
+        - m_Target: {fileID: 0}
           m_MethodName: ToggleSelector
           m_Mode: 1
           m_Arguments:
@@ -261,7 +260,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1879025878936221009}
+        - m_Target: {fileID: 0}
           m_MethodName: ToggleSelector
           m_Mode: 1
           m_Arguments:
@@ -319,16 +318,3 @@ MonoBehaviour:
   m_FlexibleWidth: 0
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
---- !u!114 &1879025878936221009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9006460723837051118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd73541c8d6048358f18e5c748be2e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 0}

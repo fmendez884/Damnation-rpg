@@ -58,8 +58,8 @@ public class PlayerStats : CharacterStats
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, int.MaxValue);
 
-        Debug.Log("Enemy Damages " + name + " for " + damage + " damage!");
-        Debug.Log(name + " HP: " + currentHealth);
+        //Debug.Log("Enemy Damages " + name + " for " + damage + " damage!");
+        //Debug.Log(name + " HP: " + currentHealth);
 
         if (currentHealth == 0)
         {

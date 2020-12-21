@@ -45,7 +45,7 @@ public class PlayerHUD : MonoBehaviour
             HUDName.color = Color.white;
             HUDHealth.color = Color.white;
         }
-            HUDName.text = playerStats.name;
+            HUDName.text = playerStats.playerName;
 
 
             HUDHealth.text = "HP: " + playerStats.currentHealth + "/" + playerStats.maxHealth;

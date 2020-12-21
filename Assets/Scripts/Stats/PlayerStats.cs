@@ -17,6 +17,7 @@ public class PlayerStats : CharacterStats
 
     //public GameObject PlayerPanel;
 
+    public string playerName;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,13 @@ public class PlayerStats : CharacterStats
         PlayerHUDPanel = Instantiate(PlayerHUDPanel) as GameObject;
 
         playerController = GetComponent<PlayerController>();
+
+        playerName = PlayerPrefs.GetString("playerName");
+
+        if (playerName == "")
+        {
+            playerName = "Yojimbo";
+        }
 
         //HUDHealth = GetComponent<Text>();
     }

@@ -140,7 +140,6 @@ MonoBehaviour:
   ActionPanel: {fileID: 0}
   actionSpacer: {fileID: 0}
   actionButton: {fileID: 0}
-  userNameDisplay: {fileID: 7132441462559061839}
 --- !u!1 &68046870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,7 +5213,7 @@ PrefabInstance:
     - target: {fileID: 689042505945319524, guid: a820246b21c904f239a5df38249c67df,
         type: 3}
       propertyPath: characterName
-      value: 
+      value: Yojimbo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a820246b21c904f239a5df38249c67df, type: 3}
@@ -10119,7 +10118,6 @@ GameObject:
   - component: {fileID: 2002389932731722544}
   - component: {fileID: 7039217799160624043}
   - component: {fileID: 2670870}
-  - component: {fileID: 7132441462559061839}
   m_Layer: 5
   m_Name: PlayerStatsPanel
   m_TagString: Untagged
@@ -10127,21 +10125,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7132441462559061839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7132441462559061838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9797072c026fa7a4e9a4509f0ed42167, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userDataReceived: 0
-  textMeshPro: {fileID: 0}
-  isLoaded: 0
 --- !u!1 &7153593489248987577
 GameObject:
   m_ObjectHideFlags: 0

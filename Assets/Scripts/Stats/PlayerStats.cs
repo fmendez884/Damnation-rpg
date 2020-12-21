@@ -29,7 +29,7 @@ public class PlayerStats : CharacterStats
 
         playerController = GetComponent<PlayerController>();
 
-        playerName = PlayerPrefs.GetString("PlayerName");
+        playerName = PlayerPrefs.GetString("playerName");
 
         if (playerName == "")
         {

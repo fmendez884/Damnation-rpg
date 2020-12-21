@@ -11,14 +11,11 @@ using Assets;
 
 public class UserNameDisplay : MonoBehaviour
 {
-    //private Oidc oidc;
-    //private bool oidcReceived;
     private UserData userData;
     public bool userDataReceived;
     public static string userName;
     public TextMeshProUGUI textMeshPro;
     public bool isLoaded;
-
 
     [DllImport("__Internal")]
     public static extern void UserDisplayLoaded();
@@ -28,15 +25,17 @@ public class UserNameDisplay : MonoBehaviour
     {
         userData = null;
         userName = "";
+        PlayerPrefs.SetString("playerName", userName);
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         
         GetComponent<CanvasRenderer>().SetAlpha(0f);
 
         isLoaded = true;
-        //#if !UNITY_EDITOR && UNITY_WEBGL
-        //    UserDisplayLoaded();
-        //#endif
 
+#if !UNITY_EDITOR && UNITY_WEBGL
+                            UserDisplayLoaded();
+#endif
+       
 
     }
 
@@ -54,6 +53,7 @@ public class UserNameDisplay : MonoBehaviour
     public void ReceiveUserData(string parameters)
     {
         userData = JsonConvert.DeserializeObject<UserData>(parameters);
+        SetUserName();
         userDataReceived = true;
     }
 
@@ -63,7 +63,7 @@ public class UserNameDisplay : MonoBehaviour
         if (userData != null)
         {
             alpha = 100f;
-            SetUserName();
+            
         }
         else
         {
@@ -77,8 +77,7 @@ public class UserNameDisplay : MonoBehaviour
 
     public void SetUserName()
     {
-        //userName = userData.DisplayName;
-        userName = "test username";
+        userName = userData.DisplayName;
         PlayerPrefs.SetString("playerName", userName);
     }
 

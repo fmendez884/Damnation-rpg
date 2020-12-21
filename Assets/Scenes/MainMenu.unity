@@ -674,10 +674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9797072c026fa7a4e9a4509f0ed42167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userName: 
-  sendFake: 0
-  sendFakeNull: 0
+  userDataReceived: 0
   textMeshPro: {fileID: 0}
+  isLoaded: 0
 --- !u!1 &927810408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1199,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: YOJIMBO
+  m_text: -DAMNATION-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1d10cf0eef52d423eb8c57b18cd4b029, type: 2}
   m_sharedMaterial: {fileID: 6367722259994140479, guid: 1d10cf0eef52d423eb8c57b18cd4b029,
@@ -1267,10 +1266,10 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -13.157562, y: 0, z: -10.964722, w: 0}
   m_textInfo:
     textComponent: {fileID: 1282547825}
-    characterCount: 7
+    characterCount: 11
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

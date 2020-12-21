@@ -7,12 +7,15 @@ using TMPro;
 using Newtonsoft.Json;
 using System.IO;
 using System.Runtime.InteropServices;
+using Assets;
 
 public class UserNameDisplay : MonoBehaviour
 {
-    private Oidc oidc;
-    private bool oidcReceived;
-    public string userName;
+    //private Oidc oidc;
+    //private bool oidcReceived;
+    private UserData userData;
+    public bool userDataReceived;
+    public static string userName;
     public TextMeshProUGUI textMeshPro;
     public bool isLoaded;
 
@@ -23,16 +26,16 @@ public class UserNameDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        oidc = null;
+        userData = null;
         userName = "";
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         
         GetComponent<CanvasRenderer>().SetAlpha(0f);
 
         isLoaded = true;
-        #if !UNITY_EDITOR && UNITY_WEBGL
-            UserDisplayLoaded();
-        #endif
+        //#if !UNITY_EDITOR && UNITY_WEBGL
+        //    UserDisplayLoaded();
+        //#endif
 
 
     }
@@ -42,25 +45,25 @@ public class UserNameDisplay : MonoBehaviour
     void Update()
     {
 
-        if (oidcReceived)
+        if (userDataReceived)
         {
             RenderUI();
         }
     }
 
-    public void ReceiveOidc(string parameters)
+    public void ReceiveUserData(string parameters)
     {
-        oidc = JsonConvert.DeserializeObject<Oidc>(parameters);
-        oidcReceived = true;
+        userData = JsonConvert.DeserializeObject<UserData>(parameters);
+        userDataReceived = true;
     }
 
     public void RenderUI()
     {
         float alpha = 0f;
-        if (oidc.User != null)
+        if (userData != null)
         {
             alpha = 100f;
-            SetUserName(oidc);
+            SetUserName();
         }
         else
         {
@@ -72,9 +75,11 @@ public class UserNameDisplay : MonoBehaviour
         
     }
 
-    public void SetUserName(Oidc reactOidc)
+    public void SetUserName()
     {
-        userName = reactOidc.User.Profile.UniqueName;
+        //userName = userData.DisplayName;
+        userName = "test username";
+        PlayerPrefs.SetString("playerName", userName);
     }
 
     

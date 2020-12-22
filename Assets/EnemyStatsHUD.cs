@@ -40,8 +40,9 @@ public class EnemyStatsHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        statsPanel.LookAt(new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z)) ;
-        statsPanel.Rotate(0, 180f, 0);
+        //statsPanel.LookAt(new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z)) ;
+        statsPanel.LookAt(transform.position + cam.transform.forward);
+        //statsPanel.Rotate(0, 180f, 0);
 
         HUDName.text = enemyStats.name;
 

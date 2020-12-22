@@ -8,11 +8,34 @@ public class MainMenu : MonoBehaviour
     //public AudioClip newGameClip;
     public AudioSource newGameSound;
     public AudioSource bellTome;
+    public AudioSource menuConfirm;
+    public AudioSource menuCancel;
+    public GameObject controlsPanel;
 
     //private void Start()
     //{
 
     //}
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && controlsPanel.activeSelf)
+        {
+            CloseControlsPanel();
+        }
+    }
+
+    public void OpenControlsPanel()
+    {
+        menuConfirm.Play();
+        controlsPanel.SetActive(true);
+    }
+
+    public void CloseControlsPanel()
+    {
+        menuCancel.Play();
+        controlsPanel.SetActive(false);
+    }
 
     public void PlayGame()
     {
@@ -48,7 +71,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Exiting Game");
+        //Debug.Log("Exiting Game");
         bellTome.Play();
         Application.Quit();
     }

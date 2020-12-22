@@ -15,6 +15,8 @@ public class PlayerHUD : MonoBehaviour
     public GameObject ActionPanel;
     public Transform actionSpacer;
     public GameObject actionButton;
+
+    public HealthBar healthBar;
     
 
     // Start is called before the first frame update
@@ -23,6 +25,9 @@ public class PlayerHUD : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         playerStats = Player.GetComponent<PlayerStats>();
 
+        healthBar = GetComponentInChildren<HealthBar>();
+        healthBar.setMaxHealth(playerStats.maxHealth);
+
         ActionPanel = GameObject.Find("ActionPanel");
         //ActionPanel.SetActive(true);
 
@@ -30,7 +35,7 @@ public class PlayerHUD : MonoBehaviour
 
         HUDName = GameObject.Find("PlayerName").GetComponent<Text>();
         HUDHealth = GameObject.Find("PlayerHP").GetComponent<Text>();
-        HUDMana = GameObject.Find("PlayerMP").GetComponent<Text>();
+        //HUDMana = GameObject.Find("PlayerMP").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -44,11 +49,13 @@ public class PlayerHUD : MonoBehaviour
 
             HUDName.color = Color.white;
             HUDHealth.color = Color.white;
+            healthBar.setMaxHealth(playerStats.maxHealth);
         }
             HUDName.text = playerStats.playerName;
 
 
             HUDHealth.text = "HP: " + playerStats.currentHealth + "/" + playerStats.maxHealth;
+            healthBar.setHealth(playerStats.currentHealth);
             //HUDMana.text = "";
         //HUDMana.text = "MP: " + currentMana + "/" + maxMana;
 

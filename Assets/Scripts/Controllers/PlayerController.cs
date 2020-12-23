@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public PlayerCombat combat;
     readonly KeyCode AttackKey = KeyCode.X;
     readonly KeyCode MagicKey = KeyCode.C;
-    readonly KeyCode ResetKey = KeyCode.R;
+    //readonly KeyCode ResetKey = KeyCode.R;
 
     //public bool action;
 
@@ -108,12 +108,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
-        {
-         
-            
-            moveDirection.y = jumpForce;
-        }
+        
 
 
 
@@ -151,12 +146,12 @@ public class PlayerController : MonoBehaviour
             //action = false;
         }
 
-        if (Input.GetKeyDown(ResetKey))
-        {
-            ResetAgent();
+        //if (Input.GetKeyDown(ResetKey))
+        //{
+        //    ResetAgent();
 
-            PlayerManager.instance.KillPlayer();
-        }
+        //    PlayerManager.instance.KillPlayer();
+        //}
 
         moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
 
@@ -246,6 +241,13 @@ public class PlayerController : MonoBehaviour
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
             transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
 
+        }
+
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        {
+
+
+            moveDirection.y = jumpForce;
         }
 
         moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats
@@ -18,10 +19,12 @@ public class PlayerStats : CharacterStats
     //public GameObject PlayerPanel;
 
     public string playerName;
+    public bool dead;
 
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
         characterAnimator = GetComponent<CharacterAnimator>();
         //Player = GameObject.FindWithTag("Player");
@@ -86,6 +89,16 @@ public class PlayerStats : CharacterStats
             
 
         }
+
+        
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Death();
+        }
     }
 
 
@@ -97,7 +110,7 @@ public class PlayerStats : CharacterStats
         TargetController.nearByEnemies.Clear();
         //targetController1.nearByEnemies.Remove(gameObject);
 
-
+        
         StartCoroutine(DeathSequence());
 
 
@@ -118,7 +131,8 @@ public class PlayerStats : CharacterStats
             // drop loot
             //gameObject.SetActive(false);
 
-            PlayerManager.instance.KillPlayer();
+            dead = true;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

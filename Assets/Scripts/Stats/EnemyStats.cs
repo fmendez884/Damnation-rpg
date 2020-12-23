@@ -112,7 +112,18 @@ public class EnemyStats : CharacterStats
 
             // drop loot
             gameObject.SetActive(false);
-            
+            Debug.Log($"{characterName} has died.");
+            EnemyList enemyList = GameObject.FindGameObjectWithTag("GameController").GetComponent<EnemyList>();
+            List<GameObject> enemies = enemyList.enemies;
+            enemies.Remove(gameObject);
+            Debug.Log($"{enemies.Count} enemies remaining");
+
+            if (enemies.Count <= 0 )
+            {
+                enemyList.isCleared();
+
+            }
+
         }
 
 

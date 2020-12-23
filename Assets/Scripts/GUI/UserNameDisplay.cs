@@ -32,10 +32,13 @@ public class UserNameDisplay : MonoBehaviour
 
         isLoaded = true;
 
+        userName = "fraancis mendez";
+        PlayerPrefs.SetString("playerName", userName);
+
 #if !UNITY_EDITOR && UNITY_WEBGL
                             UserDisplayLoaded();
 #endif
-       
+
 
     }
 

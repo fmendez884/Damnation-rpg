@@ -8,9 +8,9 @@ public class PlayerHUD : MonoBehaviour
 {
     public GameObject Player;
     public PlayerStats playerStats;
-    public Text HUDName;
-    public Text HUDHealth;
-    public Text HUDMana;
+    public TextMeshProUGUI HUDName;
+    public TextMeshProUGUI HUDHealth;
+    public TextMeshProUGUI HUDMana;
 
     public GameObject ActionPanel;
     public Transform actionSpacer;
@@ -33,8 +33,8 @@ public class PlayerHUD : MonoBehaviour
 
         //CreateAttackButtons();
 
-        HUDName = GameObject.Find("PlayerName").GetComponent<Text>();
-        HUDHealth = GameObject.Find("PlayerHP").GetComponent<Text>();
+        HUDName = GameObject.Find("PlayerName").GetComponent<TextMeshProUGUI>();
+        HUDHealth = GameObject.Find("PlayerHP").GetComponent<TextMeshProUGUI>();
         //HUDMana = GameObject.Find("PlayerMP").GetComponent<Text>();
     }
 

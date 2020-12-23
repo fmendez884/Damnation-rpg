@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     public AudioSource menuCancel;
     public GameObject controlsPanel;
 
+    //public enum menuState 
+
     //private void Start()
     //{
 

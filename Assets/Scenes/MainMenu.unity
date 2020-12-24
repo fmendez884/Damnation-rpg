@@ -793,7 +793,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1133058956}
+      - m_Target: {fileID: 0}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 771161924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9797072c026fa7a4e9a4509f0ed42167, type: 3}
+  m_Script: {fileID: 11500000, guid: e04340131a01b854ab4fa53bbd4e9c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   userDataReceived: 0
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133058954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a2184f2f09c248de86424722d6bcdea, type: 3}
+  m_Script: {fileID: 11500000, guid: f8fbd6a0c2306d447843512050832d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   newGameSound: {fileID: 1133058957}
@@ -1796,7 +1796,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b7f7d74d34b944917aa054cd65f208a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 642acf49a0f7e3e4f94201851c3ac49a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

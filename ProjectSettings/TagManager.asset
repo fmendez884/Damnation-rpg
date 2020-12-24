@@ -12,6 +12,7 @@ TagManager:
   - EncounterZone
   - Fire
   - Reticle
+  - FinalScore
   layers:
   - Default
   - TransparentFX

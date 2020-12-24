@@ -33,26 +33,30 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
         
-        if (distance <= lookRadius)
+        if (!enemyStats.dead)
         {
-            if (agent.isActiveAndEnabled)
+            if (distance <= lookRadius)
             {
-                agent.SetDestination(target.position);
+                if (agent.isActiveAndEnabled)
+                {
+                    agent.SetDestination(target.position);
+                }
             }
-        }
 
-        if (distance <= agent.stoppingDistance)
-        {
-            CharacterStats targetStats = target.GetComponent<CharacterStats>();
-            if(targetStats != null)
+            if (distance <= agent.stoppingDistance)
             {
-                //Debug.Log("Enemy is ready to attack");
-                // Attack the target
-                //combat.Attack(targetStats);
-                AttackTarget();
-                // Face the target
-                FaceTarget();
+                CharacterStats targetStats = target.GetComponent<CharacterStats>();
+                if(targetStats != null)
+                {
+                    //Debug.Log("Enemy is ready to attack");
+                    // Attack the target
+                    //combat.Attack(targetStats);
+                    AttackTarget();
+                    // Face the target
+                    FaceTarget();
+                }
             }
+
         }
     }
 

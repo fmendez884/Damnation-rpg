@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     #region Singleton
 
     public static PlayerManager instance;
+    public GameObject deathMenu;
 
     void Awake() 
     {
@@ -20,7 +21,7 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer() 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

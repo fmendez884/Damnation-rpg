@@ -61,6 +61,7 @@ public class PlayerState : MonoBehaviour
             case State.DEAD:
                 //agent.speed = 0;
                 //enemyStats.Die();
+                characterAnimator.StopAllCoroutines();
                 break;
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats
 {
-    public float deathTime = 5f;
+    public float deathTime = 0f;
     CharacterAnimator characterAnimator;
     public GameObject Player;
 
@@ -15,6 +15,7 @@ public class PlayerStats : CharacterStats
     public Text HUDHealth;
 
     public PlayerController playerController;
+    public GameObject gameManager;
 
     //public GameObject PlayerPanel;
 
@@ -24,6 +25,7 @@ public class PlayerStats : CharacterStats
     // Start is called before the first frame update
     void Start()
     {
+        deathTime = 1f;
         dead = false;
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
         characterAnimator = GetComponent<CharacterAnimator>();
@@ -72,7 +74,7 @@ public class PlayerStats : CharacterStats
         //Debug.Log("Enemy Damages " + name + " for " + damage + " damage!");
         //Debug.Log(name + " HP: " + currentHealth);
 
-        if (currentHealth == 0)
+        if (currentHealth == 0 && dead != true)
         {
             Death();
         }
@@ -95,10 +97,10 @@ public class PlayerStats : CharacterStats
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Death();
-        }
+        //if (Input.GetKeyDown(KeyCode.R) && dead != true)
+        //{
+        //    Death();
+        //}
     }
 
 
@@ -110,14 +112,17 @@ public class PlayerStats : CharacterStats
         TargetController.nearByEnemies.Clear();
         //targetController1.nearByEnemies.Remove(gameObject);
 
-        
-        StartCoroutine(DeathSequence());
+        playerController.controllerState = PlayerController.Controller.DEAD;
 
+        //Debug.Log("Die " + deathTime);
+        StartCoroutine(DeathSequence());
+        dead = true;
+        
 
 
         IEnumerator DeathSequence()
         {
-            playerController.controllerState = PlayerController.Controller.DEAD;
+            
 
             characterAnimator.Death();
             //gameObject.Disable();
@@ -130,8 +135,9 @@ public class PlayerStats : CharacterStats
 
             // drop loot
             //gameObject.SetActive(false);
-
-            dead = true;
+            gameManager.GetComponent<PlayerManager>().deathMenu.SetActive(true);
+            DeathMenu deathMenu = gameManager.GetComponent<PlayerManager>().deathMenu.GetComponent<DeathMenu>();
+            deathMenu.OnDeath();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

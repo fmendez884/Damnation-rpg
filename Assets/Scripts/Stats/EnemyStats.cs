@@ -12,7 +12,8 @@ public class EnemyStats : CharacterStats
     //public targetController1 targetController;
     public CharacterAnimator characterAnimator;
 
-    public float deathTime = 5f;
+    public float deathTime = .1f;
+    public bool dead;
 
     NavMeshAgent agent;
 
@@ -34,7 +35,7 @@ public class EnemyStats : CharacterStats
         characterAnimator = GetComponent<CharacterAnimator>();
         //enemyGameObject = this.gameObject;
         enemyStats = GetComponent<EnemyStats>();
-
+        dead = false;
         agent = GetComponent<NavMeshAgent>();
         //playerState = GameObject.Find("Player").GetComponent<PlayerState>();
         //playerStats = playerState.playerStats;
@@ -52,7 +53,7 @@ public class EnemyStats : CharacterStats
         //Debug.Log("Player Damages " + name + " for " + damage + " damage!");
         //Debug.Log(name + " HP: " + currentHealth);
 
-        if (currentHealth <= 0 || currentHealth == 0)
+        if (currentHealth <= 0 )
         {
             Death();
         }
@@ -87,12 +88,14 @@ public class EnemyStats : CharacterStats
     public override void Death()
     {
         base.Death();
+        dead = true;
         //float deathTime = 5f;
 
         targetController.target = null;
         TargetController.nearByEnemies.Clear();
         //targetController1.nearByEnemies.Remove(gameObject);
 
+        characterAnimator.StopAllCoroutines();
 
         StartCoroutine(DeathSequence());
 
@@ -100,7 +103,6 @@ public class EnemyStats : CharacterStats
 
         IEnumerator DeathSequence()
         {
-            
             characterAnimator.Death();
             //gameObject.Disable();
             agent.speed = 0;
@@ -112,17 +114,12 @@ public class EnemyStats : CharacterStats
 
             // drop loot
             gameObject.SetActive(false);
-            Debug.Log($"{characterName} has died.");
+            //Debug.Log($"{characterName} has died.");
             EnemyList enemyList = GameObject.FindGameObjectWithTag("GameController").GetComponent<EnemyList>();
-            List<GameObject> enemies = enemyList.enemies;
-            enemies.Remove(gameObject);
-            Debug.Log($"{enemies.Count} enemies remaining");
+            //List<GameObject> enemies = enemyList.enemies;
 
-            if (enemies.Count <= 0 )
-            {
-                enemyList.isCleared();
-
-            }
+            enemyList.updateEnemyList(gameObject);
+            
 
         }
 

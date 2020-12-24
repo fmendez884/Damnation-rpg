@@ -4,14 +4,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject deathMenuUI = null;
-    public bool Dead = false;
+    [SerializeField] private GameObject winMenuUI = null;
+    public bool Win = false;
     public AudioSource menuConfirm;
     public AudioSource menuCancel;
     public AudioSource menuError;
     public AudioSource bellTome;
+    public AudioSource fanfare;
     public GameObject controlsPanel;
     public GameObject leaderPanel;
     public GameObject warningPanel;
@@ -26,8 +27,9 @@ public class DeathMenu : MonoBehaviour
     public enum State
     {
         Game,
-        Dead,
-        ControlsPanel
+        Win,
+        ControlsPanel,
+        LeaderPanel
     }
     public State menuState;
 
@@ -43,21 +45,22 @@ public class DeathMenu : MonoBehaviour
         //finalScore = GameObject.FindGameObjectWithTag("FinalScore").GetComponent<TextMeshProUGUI>();
 
 
-        Dead = false;
+        Win = false;
         menuState = State.Game;
-        deathMenuUI.SetActive(false);
+        winMenuUI.SetActive(false);
         canvasGroup.alpha = 0f;
         menuConfirm.ignoreListenerPause = true;
         menuCancel.ignoreListenerPause = true;
+        menuError.ignoreListenerPause = true;
         bellTome.ignoreListenerPause = true;
+        fanfare.ignoreListenerPause = true;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Dead)
-        {
+        
             //Paused = !Paused;
             //SwitchMenuState();
 
@@ -68,31 +71,40 @@ public class DeathMenu : MonoBehaviour
                     //menuConfirm.Play();
                     //ActivateMenu();
                     break;
-                case State.Dead:
+                case State.Win:
                     //DeactivateMenu();
                     break;
                 case State.ControlsPanel:
                     //CloseControlsPanel();
                     break;
+                case State.LeaderPanel:
+                    //CloseControlsPanel();
+                    break;
 
             }
 
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (menuState == State.ControlsPanel)
                 {
 
                     CloseControlsPanel();
                 }
+
+                if (menuState == State.LeaderPanel)
+                {
+
+                    CloseLeaderPanel();
+                }
             }
 
-        }
+        
 
         //switch (menuState)
         //{
         //    case State.Game:
         //        break;
-        //    case State.Dead:
+        //    case State.Win:
         //        //ActivateMenu();
         //        break;
         //    case State.ControlsPanel:
@@ -101,12 +113,12 @@ public class DeathMenu : MonoBehaviour
 
         //}
 
-        
+
     }
 
     public void FadeUI()
     {
-        
+
         //Color newColor;
 
         //float transition = 0f;
@@ -119,7 +131,7 @@ public class DeathMenu : MonoBehaviour
         //child.color = newColor;
 
         StartCoroutine(SetAlpha(canvasGroup, canvasGroup.alpha, 1));
-        
+
 
     }
 
@@ -127,11 +139,11 @@ public class DeathMenu : MonoBehaviour
     {
         float counter = 0f;
 
-        while( counter < Duration)
+        while (counter < Duration)
         {
             counter += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(start, end, counter / Duration);
-            
+
             timeDisplay.stop = true;
             yield return null;
         }
@@ -141,11 +153,11 @@ public class DeathMenu : MonoBehaviour
     {
         //AudioListener.pause = true;
         pauseMenu.gameObject.SetActive(false);
-        deathMenuUI.SetActive(true);
+        winMenuUI.SetActive(true);
         FadeUI();
         //Time.timeScale = 0;
         CalculateFinalScore();
-        menuState = State.Dead;
+        menuState = State.Win;
     }
 
     public void DeactivateMenu()
@@ -153,13 +165,13 @@ public class DeathMenu : MonoBehaviour
         menuCancel.Play();
         Time.timeScale = 1;
         AudioListener.pause = false;
-        deathMenuUI.SetActive(false);
+        winMenuUI.SetActive(false);
         menuState = State.Game;
     }
 
     public void SwitchMenuState()
     {
-        Dead = !Dead;
+        Win = !Win;
     }
 
     public void OpenControlsPanel()
@@ -173,7 +185,7 @@ public class DeathMenu : MonoBehaviour
     {
         menuCancel.Play();
         controlsPanel.SetActive(false);
-        //menuState = State.Dead;
+        //menuState = State.Win;
     }
 
     public void OpenLeaderPanel()
@@ -190,11 +202,10 @@ public class DeathMenu : MonoBehaviour
         //menuState = State.Win;
     }
 
-
-    public void OnDeath()
+    public void OnWin()
     {
-        bellTome.Play();
         ActivateMenu();
+        fanfare.Play();
     }
 
     public void ReturnToMainMenu()

@@ -17,6 +17,8 @@ public class UserNameDisplay : MonoBehaviour
     public TextMeshProUGUI textMeshPro;
     public bool isLoaded;
 
+    //private string dummData = "{\"displayName\": \"franciss mendez\", \"email\": \"fmendez884@gmail.com\", \"profile\": {},\"timeFormat\": \"\",\"timeZone\": \"\"}";
+
     [DllImport("__Internal")]
     public static extern void UserDisplayLoaded();
 
@@ -25,15 +27,18 @@ public class UserNameDisplay : MonoBehaviour
     {
         userData = null;
         userName = "";
-        PlayerPrefs.SetString("playerName", userName);
+        //PlayerPrefs.SetString("playerName", userName);
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         
         GetComponent<CanvasRenderer>().SetAlpha(0f);
 
         isLoaded = true;
 
-        userName = "fraancis mendez";
-        PlayerPrefs.SetString("playerName", userName);
+        //PlayerPrefs.DeleteAll();
+        //ReceiveUserData(dummData);
+
+        //userName = "francis mendez";
+        //PlayerPrefs.SetString("playerName", userName);
 
 #if !UNITY_EDITOR && UNITY_WEBGL
                             UserDisplayLoaded();
@@ -56,7 +61,11 @@ public class UserNameDisplay : MonoBehaviour
     public void ReceiveUserData(string parameters)
     {
         userData = JsonConvert.DeserializeObject<UserData>(parameters);
-        SetUserName();
+        PlayerPrefs.SetString("userData", parameters);
+        userName = userData.DisplayName;
+        PlayerPrefs.SetString("playerName", userName);
+        PlayerPrefs.SetString("userSignedIn?", "true");
+        //SetUserName();
         userDataReceived = true;
     }
 
@@ -66,7 +75,7 @@ public class UserNameDisplay : MonoBehaviour
         if (userData != null)
         {
             alpha = 100f;
-            
+            //Debug.Log(userName);
         }
         else
         {
@@ -78,11 +87,12 @@ public class UserNameDisplay : MonoBehaviour
         
     }
 
-    public void SetUserName()
-    {
-        userName = userData.DisplayName;
-        PlayerPrefs.SetString("playerName", userName);
-    }
+    //public void SetUserName()
+    //{
+    //    userName = userData.DisplayName;
+    //    PlayerPrefs.SetString("playerName", userName);
+        
+    //}
 
     
 }

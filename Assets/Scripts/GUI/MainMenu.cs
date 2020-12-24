@@ -74,8 +74,8 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         //Debug.Log("Exiting Game");
-        bellTome.Play();
-        Application.Quit();
+        //bellTome.Play();
+        //Application.Quit();
     }
 
     //public void PlayNewGameSound()

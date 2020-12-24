@@ -70,10 +70,10 @@ public class PlayerController : MonoBehaviour
     {
 
         
-        float yStore = moveDirection.y;
-        moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
-        moveDirection = moveDirection.normalized * moveSpeed;
-        moveDirection.y = yStore;
+        //float yStore = moveDirection.y;
+        //moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
+        //moveDirection = moveDirection.normalized * moveSpeed;
+        //moveDirection.y = yStore;
 
 
         switch (controllerState)
@@ -108,14 +108,16 @@ public class PlayerController : MonoBehaviour
 
 
 
-        
+
+
+
 
 
 
 
         //if (target != null)
         //{
-            
+
         //    transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
         //    // Debug.Log(cam.transform.rotation);
         //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
@@ -133,18 +135,18 @@ public class PlayerController : MonoBehaviour
 
         //}
 
-       
 
-        if (Input.GetKeyDown(MagicKey))
-        {
-            ResetAgent();
 
-            //action = true;
+        //if (Input.GetKeyDown(MagicKey))
+        //{
+        //    ResetAgent();
 
-            PlayerCastMagic();
+        //    //action = true;
 
-            //action = false;
-        }
+        //    PlayerCastMagic();
+
+        //    //action = false;
+        //}
 
         //if (Input.GetKeyDown(ResetKey))
         //{
@@ -153,28 +155,28 @@ public class PlayerController : MonoBehaviour
         //    PlayerManager.instance.KillPlayer();
         //}
 
-        moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+        //moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
 
-        animator.SetBool("isGrounded", controller.isGrounded);
-        animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        //animator.SetBool("isGrounded", controller.isGrounded);
+        //animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         
 
 
     }
 
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(AttackKey))
-        {
-            PlayerAttack();
-            controllerState = Controller.ACTION;
+    //private void FixedUpdate()
+    //{
+    //    if (Input.GetKeyDown(AttackKey))
+    //    {
+    //        PlayerAttack();
+    //        controllerState = Controller.ACTION;
            
 
-        }
+    //    }
 
        
 
-    }
+    //}
 
     public void ResetAgent() 
     {
@@ -222,6 +224,12 @@ public class PlayerController : MonoBehaviour
 
     public void EnablePlayerMovement()
     {
+
+        float yStore = moveDirection.y;
+        moveDirection = (cam.transform.forward * Input.GetAxis("Vertical") + (cam.transform.right * Input.GetAxis("Horizontal")));
+        moveDirection = moveDirection.normalized * moveSpeed;
+        moveDirection.y = yStore;
+
         if (target != null)
         {
             
@@ -250,8 +258,21 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = jumpForce;
         }
 
+        if (Input.GetKeyDown(AttackKey))
+        {
+            PlayerAttack();
+            controllerState = Controller.ACTION;
+
+
+        }
+
         moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
         controller.Move(moveDirection * Time.deltaTime);
+
+        moveDirection.y += (Physics.gravity.y * gravityScale * Time.deltaTime);
+
+        animator.SetBool("isGrounded", controller.isGrounded);
+        animator.SetFloat("speedPercent", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
     }
 
 }

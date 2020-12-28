@@ -34,7 +34,7 @@ public class UserNameDisplay : MonoBehaviour
 
         isLoaded = true;
 
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         //ReceiveUserData(dummData);
 
         //userName = "francis mendez";

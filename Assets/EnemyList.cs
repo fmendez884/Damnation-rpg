@@ -31,19 +31,19 @@ public class EnemyList : MonoBehaviour
     {
         score.tmp.text = ((int)score.score).ToString();
 
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            enemies.ForEach(delegate (GameObject enemy)
-            {
-                var enemyStats = enemy.GetComponent<EnemyStats>();
-                enemyStats.TakeDamage(enemyStats.maxHealth);
-            });
-        }
+        //if(Input.GetKeyDown(KeyCode.V))
+        //{
+        //    enemies.ForEach(delegate (GameObject enemy)
+        //    {
+        //        var enemyStats = enemy.GetComponent<EnemyStats>();
+        //        enemyStats.TakeDamage(enemyStats.maxHealth);
+        //    });
+        //}
 
-        if(Input.GetKeyDown(KeyCode.B)) 
-        {
-            player.GetComponent<PlayerStats>().Death();
-        }
+        //if(Input.GetKeyDown(KeyCode.B)) 
+        //{
+        //    player.GetComponent<PlayerStats>().Death();
+        //}
 
     }
 

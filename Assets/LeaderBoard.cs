@@ -14,11 +14,13 @@ public class LeaderBoard : MonoBehaviour
     public int finalScore;
     //public WinMenu winMenu;
     public GameObject gameManager;
-    //public string leaderBoardDataString;
+    public PlayerStats playerStats;
+    public int remainingHealth;
+    public string leaderBoardDataString;
 
 
     [DllImport("__Internal")]
-    public static extern void ReceiveLeaderBoardData(string data);
+    public static extern void ReceiveLeaderBoardData(string leaderBoardData);
 
 
     // Start is called before the first frame update
@@ -26,6 +28,8 @@ public class LeaderBoard : MonoBehaviour
     {
         userData = PlayerPrefs.GetString("userData");
         gameManager = GameObject.FindGameObjectWithTag("GameController");
+        playerStats = gameManager.GetComponent<PlayerStats>();
+        remainingHealth = playerStats.currentHealth; 
         score = gameManager.GetComponentInChildren<Score>();
         finalScore = score.calculateFinalScore();
         timeDisplay = score.timeDisplay;
@@ -42,23 +46,24 @@ public class LeaderBoard : MonoBehaviour
         ScoreData scoreData = new ScoreData();
         scoreData.finalScore = finalScore;
         scoreData.timeElapsed = timeDisplay.currentTime;
+        scoreData.remainingHealth = remainingHealth;
         //leaderBoardData.scoreData;
         LeaderBoardData dataToSend = new LeaderBoardData();
         dataToSend.scoreData = scoreData;
         dataToSend.userData = userData;
 
-        string leaderBoardDataString = JsonConvert.SerializeObject(dataToSend);
-        sendleaderBoardData(leaderBoardDataString);
+        leaderBoardDataString = JsonConvert.SerializeObject(dataToSend);
+        
+        sendLeaderBoardData(leaderBoardDataString);
     }
 
-    public void sendleaderBoardData(string data)
+    public void sendLeaderBoardData(string data)
     {
-
-        //Debug.Log("Sending: " + data);
 
 #if !UNITY_EDITOR && UNITY_WEBGL
                             ReceiveLeaderBoardData(data);
 #endif
+
     }
 
     class LeaderBoardData
@@ -71,6 +76,7 @@ public class LeaderBoard : MonoBehaviour
     {
         public string timeElapsed;
         public int finalScore;
+        public int remainingHealth;
     }
 
 }

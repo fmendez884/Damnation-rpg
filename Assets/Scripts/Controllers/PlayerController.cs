@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     public PlayerCombat combat;
     readonly KeyCode AttackKey = KeyCode.X;
-    readonly KeyCode MagicKey = KeyCode.C;
+    //readonly KeyCode MagicKey = KeyCode.C;
     //readonly KeyCode ResetKey = KeyCode.R;
 
     //public bool action;

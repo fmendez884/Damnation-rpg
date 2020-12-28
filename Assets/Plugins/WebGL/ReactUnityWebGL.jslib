@@ -4,8 +4,8 @@
         window.UserDisplayLoaded();
     },
 
-    ReceiveUserData: function (userData)
+    ReceiveLeaderBoardData: function (leaderBoardData)
     {
-        window.ReceiveLeaderBoardData(userData);
-    }
+        window.ReceiveLeaderBoardData(Pointer_stringify(leaderBoardData));
+    },
 });
